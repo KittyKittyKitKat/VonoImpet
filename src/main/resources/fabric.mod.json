@@ -17,7 +17,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.kittykittykitkat.VonoImpet"
+			"com.kittykittykitkat.vono_impet.VonoImpet"
+		],
+		"client": [
+			"com.kittykittykitkat.vono_impet.VonoImpetClient"
+		],
+		"fabric-datagen": [
+			"com.kittykittykitkat.vono_impet.VonoImpetDataGenerator"
 		]
 	},
 	"mixins": [
