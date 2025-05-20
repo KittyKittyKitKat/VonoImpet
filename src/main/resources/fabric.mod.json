@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "vono_impet",
+	"version": "${version}",
+	"name": "E Vono Impet",
+	"description": "The Void Mod",
+	"authors": [
+		"KittyKittyKitKat",
+		"Startacker Astromancy"
+	],
+	"contact": {
+		"homepage": "https://github.com/KittyKittyKitKat/VonoImpet",
+		"sources": "https://github.com/KittyKittyKitKat/VonoImpet"
+	},
+	"license": "MIT",
+	"icon": "assets/vono_impet/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.kittykittykitkat.VonoImpet"
+		]
+	},
+	"mixins": [
+		"vono_impet.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
