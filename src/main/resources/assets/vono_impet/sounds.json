@@ -1,0 +1,177 @@
+{
+"ambient.null_space.loop": {
+    "sounds": [
+      {
+        "name": "vono:ambient/null_space/ambience",
+        "stream": true,
+		"volume": 0.5
+      }
+    ]
+  },
+"ambient.null_space.mood": {
+	"sounds": [
+			"name": "vono:ambient/null_space/mood1",
+			"name": "vono:ambient/null_space/mood2",
+			"name": "vono:ambient/null_space/mood3",
+			"name": "vono:ambient/null_space/mood4",
+	]
+  },
+"ambient.null_space.additions": {
+	"sounds": [
+		{
+			"name": "vono:ambient/null_space/foren1",
+			"volume": 0.55,
+			"weight": 10
+		},
+		{
+			"name": "vono:ambient/null_space/foren2",
+			"volume": 0.35
+		},
+		{
+			"name": "vono:ambient/null_space/foren3",
+			"volume": 0.35
+		},
+		{
+			"name": "vono:ambient/null_space/foren4",
+			"volume": 0.35
+		},
+		{
+			"name": "vono:ambient/null_space/foren5",
+			"volume": 0.35
+		},
+		{
+			"name": "vono:ambient/null_space/fullore1",
+			"volume": 0.35,
+			"weight": 5
+		},
+		{
+			"name": "vono:ambient/null_space/fullore2",
+			"volume": 0.45,
+			"weight": 5
+		},
+		{
+			"name": "vono:ambient/null_space/fullore3",
+			"volume": 0.35,
+			"weight": 5
+		},
+		{
+			"name": "vono:ambient/null_space/ullore1",
+			"volume": 0.55,
+			"weight": 10
+		},
+		{
+			"name": "vono:ambient/null_space/ullore2",
+			"volume": 0.55,
+			"weight": 10
+		}
+	]
+	},
+"music.vono.null_space": {
+	"sounds": [
+		{
+			"name": "minecraft:music/game/ancestry",
+			"stream": true
+		},
+		{
+			"name": "minecraft:music/game/wending",
+			"stream": true
+		},
+		{
+			"name": "minecraft:music/game/nether/nether4",
+			"stream": true
+		},
+		{
+			"name": "minecraft:music/game/nether/soulsand_valley/so_below",
+			"stream": true
+		},
+		{
+			"name": "minecraft:music/game/water/shuniji",
+			"stream": true
+		}
+	]
+	},
+"ambient.ash_tundra.loop": {
+    "sounds": [
+      {
+        "name": "vono:ambient/ash_tundra/ambience",
+        "stream": true,
+		"volume": 0.5
+      }
+    ]
+  },
+"ambient.ash_tundra.mood": {
+	"sounds": [
+			"name": "vono:ambient/ash_tundra/mood1",
+			"name": "vono:ambient/ash_tundra/mood2",
+			"name": "vono:ambient/ash_tundra/mood3",
+			"name": "vono:ambient/ash_tundra/mood4"
+	]
+  },
+"ambient.ash_tundra.additions": {
+	"sounds": [
+		{
+			"name": "vono:ambient/ash_tundra/atune1",
+			"volume": 0.25,
+			"weight": 10
+		},
+		{
+			"name": "vono:ambient/ash_tundra/atune2",
+			"volume": 0.25,
+			"weight": 5
+		},
+		{
+			"name": "vono:ambient/ash_tundra/atune3",
+			"volume": 0.15,
+			"weight": 5
+		},
+		{
+			"name": "vono:ambient/ash_tundra/echo1",
+			"volume": 0.35,
+			"weight": 2
+		},
+		{
+			"name": "vono:ambient/ash_tundra/echo2",
+			"volume": 0.3,
+			"weight": 2
+		},
+		{
+			"name": "vono:ambient/ash_tundra/tagever1",
+			"volume": 0.25
+		},
+		{
+			"name": "vono:ambient/ash_tundra/tagever2",
+			"volume": 0.25
+		},
+		{
+			"name": "vono:ambient/ash_tundra/wind1",
+			"volume": 0.35,
+			"weight": 20
+		},
+		{
+			"name": "vono:ambient/ash_tundra/wind2",
+			"volume": 0.35,
+			"weight": 20
+		},
+		{
+			"name": "vono:ambient/ash_tundra/wind3",
+			"volume": 0.35,
+			"weight": 20
+		},
+		{
+			"name": "vono:ambient/ash_tundra/zetovia1",
+			"volume": 0.125,
+			"weight": 10
+		},
+		{
+			"name": "vono:ambient/ash_tundra/zetovia2",
+			"volume": 0.125,
+			"weight": 10
+		},
+		{
+			"name": "vono:ambient/ash_tundra/zetovia3",
+			"volume": 0.15
+		},
+	]
+},
+
+}
