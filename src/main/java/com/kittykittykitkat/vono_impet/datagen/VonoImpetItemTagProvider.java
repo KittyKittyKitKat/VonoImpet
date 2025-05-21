@@ -1,9 +1,13 @@
 package com.kittykittykitkat.vono_impet.datagen;
 
+import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
+import com.kittykittykitkat.vono_impet.tag.VonoImpetItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.registry.tag.ItemTags;
+
+import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -14,6 +18,50 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+        getOrCreateTagBuilder(VonoImpetItemTags.MIRAKELL_LOGS)
+                .add(VonoImpetBlocks.MIRAKELL_LOG.asItem())
+                .add(VonoImpetBlocks.MIRAKELL_WOOD.asItem())
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG.asItem())
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LOGS)
+                .add(VonoImpetBlocks.MIRAKELL_LOG.asItem())
+                .add(VonoImpetBlocks.MIRAKELL_WOOD.asItem())
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG.asItem())
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(VonoImpetBlocks.MIRAKELL_LOG.asItem())
+                .add(VonoImpetBlocks.MIRAKELL_WOOD.asItem())
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG.asItem())
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
+                .add(VonoImpetBlocks.MIRAKELL_SLAB.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
+                .add(VonoImpetBlocks.MIRAKELL_STAIRS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
+                .add(VonoImpetBlocks.MIRAKELL_FENCE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
+                .add(VonoImpetBlocks.MIRAKELL_TRAPDOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
+                .add(VonoImpetBlocks.MIRAKELL_DOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
+                .add(VonoImpetBlocks.MIRAKELL_BUTTON.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
+                .add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.BOATS)
+                .add(VonoImpetItems.MIRAKELL_BOAT_ITEM);
+
+        getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
+                .add(VonoImpetItems.MIRAKELL_CHEST_BOAT_ITEM);
 
     }
 }

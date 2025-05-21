@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vono_impet:block/mirakell_slab"
+    },
+    "type=double": {
+      "model": "vono_impet:block/mirakell_planks"
+    },
+    "type=top": {
+      "model": "vono_impet:block/mirakell_slab_top"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "vono_impet:mirakell_log",
+    "vono_impet:mirakell_wood",
+    "vono_impet:stripped_mirakell_log",
+    "vono_impet:stripped_mirakell_wood",
+    "vono_impet:mirakell_planks",
+    "vono_impet:mirakell_slab",
+    "vono_impet:mirakell_stairs",
+    "vono_impet:mirakell_fence",
+    "vono_impet:mirakell_fence_gate",
+    "vono_impet:mirakell_door",
+    "vono_impet:mirakell_trapdoor",
+    "vono_impet:mirakell_button",
+    "vono_impet:mirakell_pressure_plate",
+    "vono_impet:mirakell_sign",
+    "vono_impet:mirakell_wall_sign",
+    "vono_impet:mirakell_hanging_sign",
+    "vono_impet:mirakell_wall_hanging_sign"
+  ]
+}
