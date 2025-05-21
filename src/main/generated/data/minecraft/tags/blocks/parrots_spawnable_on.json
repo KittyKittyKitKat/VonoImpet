@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "vono_impet:mirakell_log",
+    "vono_impet:mirakell_wood",
+    "vono_impet:stripped_mirakell_log",
+    "vono_impet:stripped_mirakell_wood",
+    "vono_impet:mirakell_leaves"
+  ]
+}

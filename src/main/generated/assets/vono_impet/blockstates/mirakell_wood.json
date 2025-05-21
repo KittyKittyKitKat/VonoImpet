@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "vono_impet:block/mirakell_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "vono_impet:block/mirakell_wood"
+    },
+    "axis=z": {
+      "model": "vono_impet:block/mirakell_wood",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "vono_impet:block/mirakell_door_bottom",
+    "top": "vono_impet:block/mirakell_door_top"
+  }
+}

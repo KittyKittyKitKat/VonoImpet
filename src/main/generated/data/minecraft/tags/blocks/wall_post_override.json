@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "vono_impet:mirakell_pressure_plate",
+    "vono_impet:mirakell_sign",
+    "vono_impet:mirakell_wall_sign"
+  ]
+}
