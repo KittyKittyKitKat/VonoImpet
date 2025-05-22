@@ -1,4 +1,6 @@
 # gradle
+src/main/generated/.cache
+src/generateBlocks.py
 
 .gradle/
 build/

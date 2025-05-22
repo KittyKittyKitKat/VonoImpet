@@ -33,7 +33,7 @@ public class VonoImpet implements ModInitializer {
 		VonoImpetBlockEntities.registerBlockEntities();
 		VonoImpetItems.registerItems();
 		VonoImpetFeatures.registerFeatures();
-		VonoImpetBoats.registerBoats();
+//		VonoImpetBoats.registerBoats();
 
 		registerCompostables();
 		registerFuels();

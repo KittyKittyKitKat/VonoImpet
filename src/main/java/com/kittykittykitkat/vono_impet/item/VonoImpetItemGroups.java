@@ -1,5 +1,6 @@
 package com.kittykittykitkat.vono_impet.item;
 
+import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -23,7 +24,25 @@ public class VonoImpetItemGroups {
                     .displayName(Text.translatable("itemGroup." + MOD_ID))
                     .icon(() -> new ItemStack(Blocks.OBSIDIAN))
                     .entries(((displayContext, entries) -> {
-
+                        entries.add(VonoImpetBlocks.MIRAKELL_LOG);
+                        entries.add(VonoImpetBlocks.MIRAKELL_WOOD);
+                        entries.add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG);
+                        entries.add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD);
+                        entries.add(VonoImpetBlocks.MIRAKELL_PLANKS);
+                        entries.add(VonoImpetBlocks.MIRAKELL_STAIRS);
+                        entries.add(VonoImpetBlocks.MIRAKELL_SLAB);
+                        entries.add(VonoImpetBlocks.MIRAKELL_FENCE);
+                        entries.add(VonoImpetBlocks.MIRAKELL_FENCE_GATE);
+                        entries.add(VonoImpetBlocks.MIRAKELL_DOOR);
+                        entries.add(VonoImpetBlocks.MIRAKELL_TRAPDOOR);
+                        entries.add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE);
+                        entries.add(VonoImpetBlocks.MIRAKELL_BUTTON);
+                        entries.add(VonoImpetItems.MIRAKELL_SIGN_ITEM);
+                        entries.add(VonoImpetItems.MIRAKELL_HANGING_SIGN_ITEM);
+//                        entries.add(VonoImpetItems.MIRAKELL_BOAT_ITEM);
+//                        entries.add(VonoImpetItems.MIRAKELL_CHEST_BOAT_ITEM);
+                        entries.add(VonoImpetBlocks.MIRAKELL_LEAVES);
+//                        entries.add(VonoImpetBlocks.MIRAKELL_SAPLING);
                     }))
                     .build()
     );

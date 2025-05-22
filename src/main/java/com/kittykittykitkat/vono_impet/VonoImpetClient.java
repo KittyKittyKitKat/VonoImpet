@@ -1,5 +1,6 @@
 package com.kittykittykitkat.vono_impet;
 
+import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
 import com.kittykittykitkat.vono_impet.entity.VonoImpetBoats;
 import com.kittykittykitkat.vono_impet.particles.VonoImpetParticles;
 import net.fabricmc.api.ClientModInitializer;
@@ -7,15 +8,15 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.RenderLayer;
 
-import static com.kittykittykitkat.vono_impet.block.VonoImpetBlocks.MIRAKELL_LEAVES;
-
 public class VonoImpetClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         VonoImpetParticles.clientRegisterParticles();
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
-                MIRAKELL_LEAVES
+                VonoImpetBlocks.MIRAKELL_LEAVES,
+                VonoImpetBlocks.MIRAKELL_DOOR,
+                VonoImpetBlocks.MIRAKELL_TRAPDOOR
         );
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent()

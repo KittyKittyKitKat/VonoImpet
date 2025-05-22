@@ -10,10 +10,18 @@
   },
 "ambient.null_space.mood": {
 	"sounds": [
-			"name": "vono:ambient/null_space/mood1",
-			"name": "vono:ambient/null_space/mood2",
-			"name": "vono:ambient/null_space/mood3",
-			"name": "vono:ambient/null_space/mood4",
+		{
+			"name": "vono:ambient/null_space/mood1"
+		},
+		{
+			"name": "vono:ambient/null_space/mood2"
+		},
+		{
+			"name": "vono:ambient/null_space/mood3"
+		},
+		{
+			"name": "vono:ambient/null_space/mood4"
+		}
 	]
   },
 "ambient.null_space.additions": {
@@ -101,10 +109,18 @@
   },
 "ambient.ash_tundra.mood": {
 	"sounds": [
-			"name": "vono:ambient/ash_tundra/mood1",
-			"name": "vono:ambient/ash_tundra/mood2",
-			"name": "vono:ambient/ash_tundra/mood3",
+		{
+			"name": "vono:ambient/ash_tundra/mood1"
+		},
+		{
+			"name": "vono:ambient/ash_tundra/mood2"
+		},
+		{
+			"name": "vono:ambient/ash_tundra/mood3"
+		},
+		{
 			"name": "vono:ambient/ash_tundra/mood4"
+		}
 	]
   },
 "ambient.ash_tundra.additions": {
@@ -170,8 +186,8 @@
 		{
 			"name": "vono:ambient/ash_tundra/zetovia3",
 			"volume": 0.15
-		},
+		}
 	]
-},
+}
 
 }
