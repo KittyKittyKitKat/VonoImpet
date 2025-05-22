@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "vono_impet:varster_planks"
+    }
+  ],
+  "result": {
+    "item": "vono_impet:varster_button"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vono_impet:block/varster_slab"
+    },
+    "type=double": {
+      "model": "vono_impet:block/varster_planks"
+    },
+    "type=top": {
+      "model": "vono_impet:block/varster_slab_top"
+    }
+  }
+}

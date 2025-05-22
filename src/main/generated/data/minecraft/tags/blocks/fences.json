@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "vono_impet:mirakell_fence"
+    "vono_impet:mirakell_fence",
+    "vono_impet:varster_fence"
   ]
 }

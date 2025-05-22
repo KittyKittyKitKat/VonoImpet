@@ -39,10 +39,30 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetBlocks.MIRAKELL_BUTTON);
                         entries.add(VonoImpetItems.MIRAKELL_SIGN_ITEM);
                         entries.add(VonoImpetItems.MIRAKELL_HANGING_SIGN_ITEM);
-//                        entries.add(VonoImpetItems.MIRAKELL_BOAT_ITEM);
-//                        entries.add(VonoImpetItems.MIRAKELL_CHEST_BOAT_ITEM);
+                        entries.add(VonoImpetItems.MIRAKELL_BOAT);
+                        entries.add(VonoImpetItems.MIRAKELL_CHEST_BOAT);
                         entries.add(VonoImpetBlocks.MIRAKELL_LEAVES);
 //                        entries.add(VonoImpetBlocks.MIRAKELL_SAPLING);
+
+                        entries.add(VonoImpetBlocks.VARSTER_LOG);
+                        entries.add(VonoImpetBlocks.VARSTER_WOOD);
+                        entries.add(VonoImpetBlocks.STRIPPED_VARSTER_LOG);
+                        entries.add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD);
+                        entries.add(VonoImpetBlocks.VARSTER_PLANKS);
+                        entries.add(VonoImpetBlocks.VARSTER_STAIRS);
+                        entries.add(VonoImpetBlocks.VARSTER_SLAB);
+                        entries.add(VonoImpetBlocks.VARSTER_FENCE);
+                        entries.add(VonoImpetBlocks.VARSTER_FENCE_GATE);
+                        entries.add(VonoImpetBlocks.VARSTER_DOOR);
+                        entries.add(VonoImpetBlocks.VARSTER_TRAPDOOR);
+                        entries.add(VonoImpetBlocks.VARSTER_PRESSURE_PLATE);
+                        entries.add(VonoImpetBlocks.VARSTER_BUTTON);
+                        entries.add(VonoImpetItems.VARSTER_SIGN_ITEM);
+                        entries.add(VonoImpetItems.VARSTER_HANGING_SIGN_ITEM);
+                        entries.add(VonoImpetItems.VARSTER_BOAT);
+                        entries.add(VonoImpetItems.VARSTER_CHEST_BOAT);
+                        entries.add(VonoImpetBlocks.VARSTER_LEAVES);
+//                        entries.add(VonoImpetBlocks.VARSTER_SAPLING);
                     }))
                     .build()
     );

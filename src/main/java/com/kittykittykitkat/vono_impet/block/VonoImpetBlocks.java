@@ -1,16 +1,19 @@
 package com.kittykittykitkat.vono_impet.block;
 
-import com.kittykittykitkat.vono_impet.block.entity.VonoImpetHangingSignBlockEntity;
-import com.kittykittykitkat.vono_impet.block.entity.VonoImpetSignBlockEntity;
+import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.minecraft.block.*;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 
 import static com.kittykittykitkat.vono_impet.VonoImpet.MOD_ID;
 
@@ -35,33 +38,43 @@ public class VonoImpetBlocks {
 //    public static final Block MIRAKELL_SAPLING = registerBlock("mirakell_sapling", new SaplingBlock(VonoImpetBlockSettings.MIRAKELL_SAPLING));
 //    public static final Block POTTED_MIRAKELL_SAPLING = registerBlockNoItem("potted_mirakell_sapling", new FlowerPotBlock(MIRAKELL_SAPLING, VonoImpetBlockSettings.POTTED_MIRAKELL_SAPLING));
 
-    public static final Block MIRAKELL_SIGN = registerBlockNoItem("mirakell_sign", new SignBlock(VonoImpetBlockSettings.MIRAKELL_SIGN, MIRAKELL_WOOD_TYPE) {
-        @Override
-        public VonoImpetSignBlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-            return new VonoImpetSignBlockEntity(pos, state);
-        }
-    });
-    public static final Block MIRAKELL_WALL_SIGN = registerBlockNoItem("mirakell_wall_sign", new WallSignBlock(VonoImpetBlockSettings.MIRAKELL_WALL_SIGN.dropsLike(MIRAKELL_SIGN), MIRAKELL_WOOD_TYPE) {
-        @Override
-        public VonoImpetSignBlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-            return new VonoImpetSignBlockEntity(pos, state);
-        }
-    });
-    public static final Block MIRAKELL_HANGING_SIGN = registerBlockNoItem("mirakell_hanging_sign", new HangingSignBlock(VonoImpetBlockSettings.MIRAKELL_HANGING_SIGN, MIRAKELL_WOOD_TYPE) {
-        @Override
-        public VonoImpetHangingSignBlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-            return new VonoImpetHangingSignBlockEntity(pos, state);
-        }
-    });
-    public static final Block MIRAKELL_WALL_HANGING_SIGN = registerBlockNoItem("mirakell_wall_hanging_sign", new WallHangingSignBlock(VonoImpetBlockSettings.MIRAKELL_WALL_HANGING_SIGN.dropsLike(MIRAKELL_HANGING_SIGN), MIRAKELL_WOOD_TYPE) {
-        @Override
-        public VonoImpetHangingSignBlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-            return new VonoImpetHangingSignBlockEntity(pos, state);
-        }
-    });
+    public static final Block MIRAKELL_SIGN = registerBlockNoItem("mirakell_sign", new TerraformSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_SIGN_TEXTURE, VonoImpetBlockSettings.MIRAKELL_SIGN));
+    public static final Block MIRAKELL_WALL_SIGN = registerBlockNoItem("mirakell_wall_sign", new TerraformWallSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_SIGN_TEXTURE, VonoImpetBlockSettings.MIRAKELL_WALL_SIGN.dropsLike(MIRAKELL_SIGN)));
+    public static final Block MIRAKELL_HANGING_SIGN = registerBlockNoItem("mirakell_hanging_sign", new TerraformHangingSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_TEXTURE, VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_GUI_TEXTURE, VonoImpetBlockSettings.MIRAKELL_HANGING_SIGN));
+    public static final Block MIRAKELL_WALL_HANGING_SIGN = registerBlockNoItem("mirakell_wall_hanging_sign", new TerraformWallHangingSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_TEXTURE, VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_GUI_TEXTURE, VonoImpetBlockSettings.MIRAKELL_WALL_HANGING_SIGN.dropsLike(MIRAKELL_HANGING_SIGN)));
 
+    public static final BlockFamily MIRAKELL_FAMILY = BlockFamilies.register(MIRAKELL_PLANKS)
+            .sign(MIRAKELL_SIGN, MIRAKELL_WALL_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
 
+    public static final BlockSetType VARSTER_WOOD_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(new Identifier(MOD_ID, "varster"));
+    public static final WoodType VARSTER_WOOD_TYPE = WoodTypeBuilder.copyOf(WoodType.OAK).register(new Identifier(MOD_ID, "varster"), VARSTER_WOOD_SET);
 
+    public static final Block VARSTER_LOG = registerBlock("varster_log", new PillarBlock(VonoImpetBlockSettings.VARSTER_LOG));
+    public static final Block VARSTER_WOOD = registerBlock("varster_wood", new PillarBlock(VonoImpetBlockSettings.VARSTER_LOG));
+    public static final Block STRIPPED_VARSTER_LOG = registerBlock("stripped_varster_log", new PillarBlock(VonoImpetBlockSettings.VARSTER_LOG));
+    public static final Block STRIPPED_VARSTER_WOOD = registerBlock("stripped_varster_wood", new PillarBlock(VonoImpetBlockSettings.VARSTER_LOG));
+    public static final Block VARSTER_LEAVES = registerBlock("varster_leaves", new LeavesBlock(VonoImpetBlockSettings.VARSTER_LEAVES));
+    public static final Block VARSTER_PLANKS = registerBlock("varster_planks", new Block(VonoImpetBlockSettings.VARSTER_PLANKS));
+    public static final Block VARSTER_SLAB = registerBlock("varster_slab", new SlabBlock(VonoImpetBlockSettings.VARSTER_PLANKS));
+    public static final Block VARSTER_STAIRS = registerBlock("varster_stairs", new StairsBlock(VARSTER_PLANKS.getDefaultState(), VonoImpetBlockSettings.VARSTER_PLANKS));
+    public static final Block VARSTER_FENCE = registerBlock("varster_fence", new FenceBlock(VonoImpetBlockSettings.VARSTER_PLANKS));
+    public static final Block VARSTER_FENCE_GATE = registerBlock("varster_fence_gate", new FenceGateBlock(VonoImpetBlockSettings.VARSTER_PLANKS, VARSTER_WOOD_TYPE));
+    public static final Block VARSTER_DOOR = registerBlock("varster_door", new DoorBlock(VonoImpetBlockSettings.VARSTER_DOOR, VARSTER_WOOD_SET));
+    public static final Block VARSTER_TRAPDOOR = registerBlock("varster_trapdoor", new TrapdoorBlock(VonoImpetBlockSettings.VARSTER_TRAPDOOR, VARSTER_WOOD_SET));
+    public static final Block VARSTER_BUTTON = registerBlock("varster_button", new ButtonBlock(VonoImpetBlockSettings.VARSTER_BUTTON, VARSTER_WOOD_SET, 30, true));
+    public static final Block VARSTER_PRESSURE_PLATE = registerBlock("varster_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, VonoImpetBlockSettings.VARSTER_PRESSURE_PLATE, VARSTER_WOOD_SET));
+//    public static final Block VARSTER_SAPLING = registerBlock("varster_sapling", new SaplingBlock(VonoImpetBlockSettings.VARSTER_SAPLING));
+//    public static final Block POTTED_VARSTER_SAPLING = registerBlockNoItem("potted_varster_sapling", new FlowerPotBlock(VARSTER_SAPLING, VonoImpetBlockSettings.POTTED_VARSTER_SAPLING));
+
+    public static final Block VARSTER_SIGN = registerBlockNoItem("varster_sign", new TerraformSignBlock(VonoImpetBlockTextureIdentifiers.VARSTER_SIGN_TEXTURE, VonoImpetBlockSettings.VARSTER_SIGN));
+    public static final Block VARSTER_WALL_SIGN = registerBlockNoItem("varster_wall_sign", new TerraformWallSignBlock(VonoImpetBlockTextureIdentifiers.VARSTER_SIGN_TEXTURE, VonoImpetBlockSettings.VARSTER_WALL_SIGN.dropsLike(VARSTER_SIGN)));
+    public static final Block VARSTER_HANGING_SIGN = registerBlockNoItem("varster_hanging_sign", new TerraformHangingSignBlock(VonoImpetBlockTextureIdentifiers.VARSTER_HANGING_SIGN_TEXTURE, VonoImpetBlockTextureIdentifiers.VARSTER_HANGING_SIGN_GUI_TEXTURE, VonoImpetBlockSettings.VARSTER_HANGING_SIGN));
+    public static final Block VARSTER_WALL_HANGING_SIGN = registerBlockNoItem("varster_wall_hanging_sign", new TerraformWallHangingSignBlock(VonoImpetBlockTextureIdentifiers.VARSTER_HANGING_SIGN_TEXTURE, VonoImpetBlockTextureIdentifiers.VARSTER_HANGING_SIGN_GUI_TEXTURE, VonoImpetBlockSettings.VARSTER_WALL_HANGING_SIGN.dropsLike(VARSTER_HANGING_SIGN)));
+
+    public static final BlockFamily VARSTER_FAMILY = BlockFamilies.register(VARSTER_PLANKS)
+            .sign(VARSTER_SIGN, VARSTER_WALL_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
 
     public static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), new BlockItem(block, new FabricItemSettings()));

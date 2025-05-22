@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "vono_impet:block/stripped_varster_log_top",
+    "side": "vono_impet:block/stripped_varster_log"
+  }
+}

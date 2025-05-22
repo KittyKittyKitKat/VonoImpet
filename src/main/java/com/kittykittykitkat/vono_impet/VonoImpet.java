@@ -1,7 +1,6 @@
 package com.kittykittykitkat.vono_impet;
 
 import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
-import com.kittykittykitkat.vono_impet.block.entity.VonoImpetBlockEntities;
 import com.kittykittykitkat.vono_impet.compat.VonoImpetDramaticDoors;
 import com.kittykittykitkat.vono_impet.entity.VonoImpetBoats;
 import com.kittykittykitkat.vono_impet.feature.VonoImpetFeatures;
@@ -30,10 +29,9 @@ public class VonoImpet implements ModInitializer {
 		VonoImpetItemGroups.registerItemGroups();
 		VonoImpetSounds.registerSounds();
 		VonoImpetBlocks.registerBlocks();
-		VonoImpetBlockEntities.registerBlockEntities();
 		VonoImpetItems.registerItems();
 		VonoImpetFeatures.registerFeatures();
-//		VonoImpetBoats.registerBoats();
+		VonoImpetBoats.registerBoats();
 
 		registerCompostables();
 		registerFuels();
@@ -54,15 +52,25 @@ public class VonoImpet implements ModInitializer {
 		FuelRegistry.INSTANCE.add(VonoImpetItems.MIRAKELL_SIGN_ITEM, 800);
 		FuelRegistry.INSTANCE.add(VonoImpetItems.MIRAKELL_HANGING_SIGN_ITEM, 800);
 //		FuelRegistry.INSTANCE.add(VonoImpetBlocks.MIRAKELL_SAPLING, 100);
-		FuelRegistry.INSTANCE.add(VonoImpetItems.MIRAKELL_BOAT_ITEM, 1200);
-		FuelRegistry.INSTANCE.add(VonoImpetItems.MIRAKELL_CHEST_BOAT_ITEM, 1200);
+		FuelRegistry.INSTANCE.add(VonoImpetItems.MIRAKELL_BOAT, 1200);
+		FuelRegistry.INSTANCE.add(VonoImpetItems.MIRAKELL_CHEST_BOAT, 1200);
 		FuelRegistry.INSTANCE.add(VonoImpetBlocks.MIRAKELL_FENCE, 300);
 		FuelRegistry.INSTANCE.add(VonoImpetBlocks.MIRAKELL_FENCE_GATE, 300);
+
+		FuelRegistry.INSTANCE.add(VonoImpetItems.VARSTER_SIGN_ITEM, 800);
+		FuelRegistry.INSTANCE.add(VonoImpetItems.VARSTER_HANGING_SIGN_ITEM, 800);
+//		FuelRegistry.INSTANCE.add(VonoImpetBlocks.VARSTER_SAPLING, 100);
+		FuelRegistry.INSTANCE.add(VonoImpetItems.VARSTER_BOAT, 1200);
+		FuelRegistry.INSTANCE.add(VonoImpetItems.VARSTER_CHEST_BOAT, 1200);
+		FuelRegistry.INSTANCE.add(VonoImpetBlocks.VARSTER_FENCE, 300);
+		FuelRegistry.INSTANCE.add(VonoImpetBlocks.VARSTER_FENCE_GATE, 300);
 	}
 
 	private void registerStrippables() {
 		StrippableBlockRegistry.register(VonoImpetBlocks.MIRAKELL_LOG, VonoImpetBlocks.STRIPPED_MIRAKELL_LOG);
 		StrippableBlockRegistry.register(VonoImpetBlocks.MIRAKELL_WOOD, VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD);
+		StrippableBlockRegistry.register(VonoImpetBlocks.VARSTER_LOG, VonoImpetBlocks.STRIPPED_VARSTER_LOG);
+		StrippableBlockRegistry.register(VonoImpetBlocks.VARSTER_WOOD, VonoImpetBlocks.STRIPPED_VARSTER_WOOD);
 	}
 
 	private void registerFlammables() {
@@ -76,5 +84,16 @@ public class VonoImpet implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.MIRAKELL_FENCE, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.MIRAKELL_FENCE_GATE, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.MIRAKELL_STAIRS, 5, 20);
+
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.STRIPPED_VARSTER_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_SLAB, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_FENCE, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_FENCE_GATE, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(VonoImpetBlocks.VARSTER_STAIRS, 5, 20);
 	}
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "vono_impet:mirakell_planks"
+    }
+  ],
+  "result": {
+    "item": "vono_impet:mirakell_button"
+  }
+}

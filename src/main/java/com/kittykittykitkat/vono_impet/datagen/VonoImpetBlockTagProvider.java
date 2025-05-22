@@ -18,7 +18,8 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(VonoImpetBlocks.MIRAKELL_LEAVES);
+                .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
@@ -37,100 +38,160 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.MIRAKELL_SIGN)
                 .add(VonoImpetBlocks.MIRAKELL_WALL_SIGN)
                 .add(VonoImpetBlocks.MIRAKELL_HANGING_SIGN)
-                .add(VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN);
+                .add(VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN)
 //                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
+                .add(VonoImpetBlocks.VARSTER_LOG)
+                .add(VonoImpetBlocks.VARSTER_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD)
+                .add(VonoImpetBlocks.VARSTER_PLANKS)
+                .add(VonoImpetBlocks.VARSTER_SLAB)
+                .add(VonoImpetBlocks.VARSTER_STAIRS)
+                .add(VonoImpetBlocks.VARSTER_FENCE)
+                .add(VonoImpetBlocks.VARSTER_FENCE_GATE)
+                .add(VonoImpetBlocks.VARSTER_DOOR)
+                .add(VonoImpetBlocks.VARSTER_TRAPDOOR)
+                .add(VonoImpetBlocks.VARSTER_BUTTON)
+                .add(VonoImpetBlocks.VARSTER_PRESSURE_PLATE)
+                .add(VonoImpetBlocks.VARSTER_SIGN)
+                .add(VonoImpetBlocks.VARSTER_WALL_SIGN)
+                .add(VonoImpetBlocks.VARSTER_HANGING_SIGN)
+                .add(VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN);
+//                .add(VonoImpetBlocks.VARSTER_SAPLING)
 
         getOrCreateTagBuilder(BlockTags.SLABS)
-                .add(VonoImpetBlocks.MIRAKELL_SLAB);
+                .add(VonoImpetBlocks.MIRAKELL_SLAB)
+                .add(VonoImpetBlocks.VARSTER_SLAB);
 
         getOrCreateTagBuilder(BlockTags.STAIRS)
-                .add(VonoImpetBlocks.MIRAKELL_STAIRS);
+                .add(VonoImpetBlocks.MIRAKELL_STAIRS)
+                .add(VonoImpetBlocks.VARSTER_STAIRS);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(VonoImpetBlocks.MIRAKELL_FENCE);
+                .add(VonoImpetBlocks.MIRAKELL_FENCE)
+                .add(VonoImpetBlocks.VARSTER_FENCE);
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(VonoImpetBlocks.MIRAKELL_FENCE_GATE);
+                .add(VonoImpetBlocks.MIRAKELL_FENCE_GATE)
+                .add(VonoImpetBlocks.VARSTER_FENCE_GATE);
 
         getOrCreateTagBuilder(BlockTags.BUTTONS)
-                .add(VonoImpetBlocks.MIRAKELL_BUTTON);
+                .add(VonoImpetBlocks.MIRAKELL_BUTTON)
+                .add(VonoImpetBlocks.VARSTER_BUTTON);
 
         getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
-            .add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE);
+            .add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE)
+            .add(VonoImpetBlocks.VARSTER_PRESSURE_PLATE);
 
         getOrCreateTagBuilder(BlockTags.TRAPDOORS)
-                .add(VonoImpetBlocks.MIRAKELL_TRAPDOOR);
+                .add(VonoImpetBlocks.MIRAKELL_TRAPDOOR)
+                .add(VonoImpetBlocks.VARSTER_TRAPDOOR);
 
         getOrCreateTagBuilder(BlockTags.DOORS)
-                .add(VonoImpetBlocks.MIRAKELL_DOOR);
+                .add(VonoImpetBlocks.MIRAKELL_DOOR)
+                .add(VonoImpetBlocks.VARSTER_DOOR);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
-                .add(VonoImpetBlocks.MIRAKELL_SLAB);
+                .add(VonoImpetBlocks.MIRAKELL_SLAB)
+                .add(VonoImpetBlocks.VARSTER_SLAB);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
-                .add(VonoImpetBlocks.MIRAKELL_STAIRS);
+                .add(VonoImpetBlocks.MIRAKELL_STAIRS)
+                .add(VonoImpetBlocks.VARSTER_STAIRS);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
-                .add(VonoImpetBlocks.MIRAKELL_FENCE);
+                .add(VonoImpetBlocks.MIRAKELL_FENCE)
+                .add(VonoImpetBlocks.VARSTER_FENCE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
-                .add(VonoImpetBlocks.MIRAKELL_BUTTON);
+                .add(VonoImpetBlocks.MIRAKELL_BUTTON)
+                .add(VonoImpetBlocks.VARSTER_BUTTON);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE);
+                .add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE)
+                .add(VonoImpetBlocks.VARSTER_PRESSURE_PLATE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
-                .add(VonoImpetBlocks.MIRAKELL_TRAPDOOR);
+                .add(VonoImpetBlocks.MIRAKELL_TRAPDOOR)
+                .add(VonoImpetBlocks.VARSTER_TRAPDOOR);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
-                .add(VonoImpetBlocks.MIRAKELL_DOOR);
+                .add(VonoImpetBlocks.MIRAKELL_DOOR)
+                .add(VonoImpetBlocks.VARSTER_DOOR);
 
         getOrCreateTagBuilder(BlockTags.UNSTABLE_BOTTOM_CENTER)
-                .add(VonoImpetBlocks.MIRAKELL_FENCE_GATE);
+                .add(VonoImpetBlocks.MIRAKELL_FENCE_GATE)
+                .add(VonoImpetBlocks.VARSTER_FENCE_GATE);
 
         getOrCreateTagBuilder(BlockTags.WALL_POST_OVERRIDE)
                 .add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE)
                 .add(VonoImpetBlocks.MIRAKELL_SIGN)
-                .add(VonoImpetBlocks.MIRAKELL_WALL_SIGN);
+                .add(VonoImpetBlocks.MIRAKELL_WALL_SIGN)
+                .add(VonoImpetBlocks.VARSTER_PRESSURE_PLATE)
+                .add(VonoImpetBlocks.VARSTER_SIGN)
+                .add(VonoImpetBlocks.VARSTER_WALL_SIGN);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
                 .add(VonoImpetBlocks.MIRAKELL_WOOD)
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG)
-                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD);
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD)
+                .add(VonoImpetBlocks.VARSTER_LOG)
+                .add(VonoImpetBlocks.VARSTER_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD);
 
         getOrCreateTagBuilder(BlockTags.LOGS)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
                 .add(VonoImpetBlocks.MIRAKELL_WOOD)
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG)
-                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD);
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD)
+                .add(VonoImpetBlocks.VARSTER_LOG)
+                .add(VonoImpetBlocks.VARSTER_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD);
 
         getOrCreateTagBuilder(BlockTags.PLANKS)
-                .add(VonoImpetBlocks.MIRAKELL_PLANKS);
+                .add(VonoImpetBlocks.MIRAKELL_PLANKS)
+                .add(VonoImpetBlocks.VARSTER_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.PARROTS_SPAWNABLE_ON)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
                 .add(VonoImpetBlocks.MIRAKELL_WOOD)
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG)
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD)
-                .add(VonoImpetBlocks.MIRAKELL_LEAVES);
+                .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.VARSTER_LOG)
+                .add(VonoImpetBlocks.VARSTER_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD)
+                .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.REPLACEABLE_BY_TREES)
-                .add(VonoImpetBlocks.MIRAKELL_LEAVES);
+                .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.SWORD_EFFICIENT)
-//                .add(VonoImpetBlocks.MIRAKELL_SAPLIING)
-                .add(VonoImpetBlocks.MIRAKELL_LEAVES);
+//                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
+                .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+//                .add(VonoImpetBlocks.VARSTER_SAPLING)
+                .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS);
 //            .add(VonoImpetBlocks.POTTED_MIRAKELL_SAPLING);
+//            .add(VonoImpetBlocks.POTTED_VARSTER_SAPLING);
 
         getOrCreateTagBuilder(BlockTags.LAVA_POOL_STONE_CANNOT_REPLACE)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
                 .add(VonoImpetBlocks.MIRAKELL_WOOD)
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG)
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD)
-                .add(VonoImpetBlocks.MIRAKELL_LEAVES);
+                .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.VARSTER_LOG)
+                .add(VonoImpetBlocks.VARSTER_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD)
+                .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(VonoImpetBlockTags.MIRAKELL_LOGS)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
@@ -138,17 +199,27 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG)
                 .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD);
 
+        getOrCreateTagBuilder(VonoImpetBlockTags.VARSTER_LOGS)
+                .add(VonoImpetBlocks.VARSTER_LOG)
+                .add(VonoImpetBlocks.VARSTER_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD);
+
         getOrCreateTagBuilder(BlockTags.STANDING_SIGNS)
-                .add(VonoImpetBlocks.MIRAKELL_SIGN);
+                .add(VonoImpetBlocks.MIRAKELL_SIGN)
+                .add(VonoImpetBlocks.VARSTER_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
-                .add(VonoImpetBlocks.MIRAKELL_WALL_SIGN);
+                .add(VonoImpetBlocks.MIRAKELL_WALL_SIGN)
+                .add(VonoImpetBlocks.VARSTER_WALL_SIGN);
 
         getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
-                .add(VonoImpetBlocks.MIRAKELL_HANGING_SIGN);
+                .add(VonoImpetBlocks.MIRAKELL_HANGING_SIGN)
+                .add(VonoImpetBlocks.VARSTER_HANGING_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
-                .add(VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN);
+                .add(VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN)
+                .add(VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN);
 
     }
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "vono_impet:mirakell_door"
+    "vono_impet:mirakell_door",
+    "vono_impet:varster_door"
   ]
 }

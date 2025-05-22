@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "vono_impet:mirakell_button"
+    "vono_impet:mirakell_button",
+    "vono_impet:varster_button"
   ]
 }

@@ -1,10 +1,12 @@
 package com.kittykittykitkat.vono_impet.datagen;
 
 import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
+import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Models;
 
 public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
     public VonoImpetBlockStateModelProvider(FabricDataOutput output) {
@@ -23,15 +25,37 @@ public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
                 .button(VonoImpetBlocks.MIRAKELL_BUTTON)
                 .fence(VonoImpetBlocks.MIRAKELL_FENCE)
                 .fenceGate(VonoImpetBlocks.MIRAKELL_FENCE_GATE)
-                .pressurePlate(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE);
+                .pressurePlate(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE)
+                .family(VonoImpetBlocks.MIRAKELL_FAMILY);
         blockStateModelGenerator.registerDoor(VonoImpetBlocks.MIRAKELL_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(VonoImpetBlocks.MIRAKELL_TRAPDOOR);
-        // TODO: SIGNS AND HANGING SIGNS
         // TODO: SAPLING AND POTTED SAPLING
+
+        blockStateModelGenerator.registerLog(VonoImpetBlocks.VARSTER_LOG).log(VonoImpetBlocks.VARSTER_LOG).wood(VonoImpetBlocks.VARSTER_WOOD);
+        blockStateModelGenerator.registerLog(VonoImpetBlocks.STRIPPED_VARSTER_LOG).log(VonoImpetBlocks.STRIPPED_VARSTER_LOG).wood(VonoImpetBlocks.STRIPPED_VARSTER_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.VARSTER_LEAVES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(VonoImpetBlocks.VARSTER_PLANKS)
+                .stairs(VonoImpetBlocks.VARSTER_STAIRS)
+                .slab(VonoImpetBlocks.VARSTER_SLAB)
+                .button(VonoImpetBlocks.VARSTER_BUTTON)
+                .fence(VonoImpetBlocks.VARSTER_FENCE)
+                .fenceGate(VonoImpetBlocks.VARSTER_FENCE_GATE)
+                .pressurePlate(VonoImpetBlocks.VARSTER_PRESSURE_PLATE)
+                .family(VonoImpetBlocks.VARSTER_FAMILY);
+        blockStateModelGenerator.registerDoor(VonoImpetBlocks.VARSTER_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(VonoImpetBlocks.VARSTER_TRAPDOOR);
+        // TODO: SAPLING AND POTTED SAPLING
+
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(VonoImpetItems.MIRAKELL_HANGING_SIGN_ITEM, Models.GENERATED);
+        itemModelGenerator.register(VonoImpetItems.MIRAKELL_BOAT, Models.GENERATED);
+        itemModelGenerator.register(VonoImpetItems.MIRAKELL_CHEST_BOAT, Models.GENERATED);
 
+        itemModelGenerator.register(VonoImpetItems.VARSTER_HANGING_SIGN_ITEM, Models.GENERATED);
+        itemModelGenerator.register(VonoImpetItems.VARSTER_BOAT, Models.GENERATED);
+        itemModelGenerator.register(VonoImpetItems.VARSTER_CHEST_BOAT, Models.GENERATED);
     }
 }

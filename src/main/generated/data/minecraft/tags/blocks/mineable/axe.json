@@ -17,6 +17,23 @@
     "vono_impet:mirakell_sign",
     "vono_impet:mirakell_wall_sign",
     "vono_impet:mirakell_hanging_sign",
-    "vono_impet:mirakell_wall_hanging_sign"
+    "vono_impet:mirakell_wall_hanging_sign",
+    "vono_impet:varster_log",
+    "vono_impet:varster_wood",
+    "vono_impet:stripped_varster_log",
+    "vono_impet:stripped_varster_wood",
+    "vono_impet:varster_planks",
+    "vono_impet:varster_slab",
+    "vono_impet:varster_stairs",
+    "vono_impet:varster_fence",
+    "vono_impet:varster_fence_gate",
+    "vono_impet:varster_door",
+    "vono_impet:varster_trapdoor",
+    "vono_impet:varster_button",
+    "vono_impet:varster_pressure_plate",
+    "vono_impet:varster_sign",
+    "vono_impet:varster_wall_sign",
+    "vono_impet:varster_hanging_sign",
+    "vono_impet:varster_wall_hanging_sign"
   ]
 }
