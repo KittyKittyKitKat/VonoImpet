@@ -1,10 +1,10 @@
 {
-	"required": true,
-	"package": "com.kittykittykitkat.vono_impet.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "com.kittykittykitkat.vono_impet.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

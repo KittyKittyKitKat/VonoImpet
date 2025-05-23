@@ -1,8 +1,8 @@
 package com.kittykittykitkat.vono_impet;
 
 import com.kittykittykitkat.vono_impet.datagen.*;
-import com.kittykittykitkat.vono_impet.feature.VonoImpetConfiguredFeatures;
-import com.kittykittykitkat.vono_impet.feature.VonoImpetPlacedFeatures;
+import com.kittykittykitkat.vono_impet.world.VonoImpetConfiguredFeatures;
+import com.kittykittykitkat.vono_impet.world.VonoImpetPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;

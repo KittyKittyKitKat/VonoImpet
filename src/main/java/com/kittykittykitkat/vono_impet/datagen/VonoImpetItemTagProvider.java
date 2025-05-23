@@ -50,6 +50,10 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG.asItem())
                 .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD.asItem());
 
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(VonoImpetBlocks.MIRAKELL_PLANKS.asItem())
+                .add(VonoImpetBlocks.VARSTER_PLANKS.asItem());
+
         getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
                 .add(VonoImpetBlocks.MIRAKELL_SLAB.asItem())
                 .add(VonoImpetBlocks.VARSTER_SLAB.asItem());
@@ -86,5 +90,8 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 .add(VonoImpetItems.MIRAKELL_CHEST_BOAT)
                 .add(VonoImpetItems.VARSTER_CHEST_BOAT);
 
+        getOrCreateTagBuilder(ItemTags.SAPLINGS)
+                .add(VonoImpetBlocks.MIRAKELL_SAPLING.asItem());
+//                .add(VonoImpetBlocks.VARSTER_SAPLING.asItem())
     }
 }

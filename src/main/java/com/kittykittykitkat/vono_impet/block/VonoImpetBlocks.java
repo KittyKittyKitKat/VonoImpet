@@ -1,5 +1,6 @@
 package com.kittykittykitkat.vono_impet.block;
 
+import com.kittykittykitkat.vono_impet.world.tree.MirakellSaplingGenerator;
 import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
@@ -35,14 +36,16 @@ public class VonoImpetBlocks {
     public static final Block MIRAKELL_TRAPDOOR = registerBlock("mirakell_trapdoor", new TrapdoorBlock(VonoImpetBlockSettings.MIRAKELL_TRAPDOOR, MIRAKELL_WOOD_SET));
     public static final Block MIRAKELL_BUTTON = registerBlock("mirakell_button", new ButtonBlock(VonoImpetBlockSettings.MIRAKELL_BUTTON, MIRAKELL_WOOD_SET, 30, true));
     public static final Block MIRAKELL_PRESSURE_PLATE = registerBlock("mirakell_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, VonoImpetBlockSettings.MIRAKELL_PRESSURE_PLATE, MIRAKELL_WOOD_SET));
-//    public static final Block MIRAKELL_SAPLING = registerBlock("mirakell_sapling", new SaplingBlock(VonoImpetBlockSettings.MIRAKELL_SAPLING));
-//    public static final Block POTTED_MIRAKELL_SAPLING = registerBlockNoItem("potted_mirakell_sapling", new FlowerPotBlock(MIRAKELL_SAPLING, VonoImpetBlockSettings.POTTED_MIRAKELL_SAPLING));
-
+    public static final Block MIRAKELL_SAPLING = registerBlock("mirakell_sapling", new SaplingBlock(new MirakellSaplingGenerator(), VonoImpetBlockSettings.MIRAKELL_SAPLING));
+    public static final Block POTTED_MIRAKELL_SAPLING = registerBlockNoItem("potted_mirakell_sapling", new FlowerPotBlock(MIRAKELL_SAPLING, VonoImpetBlockSettings.POTTED_MIRAKELL_SAPLING));
     public static final Block MIRAKELL_SIGN = registerBlockNoItem("mirakell_sign", new TerraformSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_SIGN_TEXTURE, VonoImpetBlockSettings.MIRAKELL_SIGN));
     public static final Block MIRAKELL_WALL_SIGN = registerBlockNoItem("mirakell_wall_sign", new TerraformWallSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_SIGN_TEXTURE, VonoImpetBlockSettings.MIRAKELL_WALL_SIGN.dropsLike(MIRAKELL_SIGN)));
     public static final Block MIRAKELL_HANGING_SIGN = registerBlockNoItem("mirakell_hanging_sign", new TerraformHangingSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_TEXTURE, VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_GUI_TEXTURE, VonoImpetBlockSettings.MIRAKELL_HANGING_SIGN));
     public static final Block MIRAKELL_WALL_HANGING_SIGN = registerBlockNoItem("mirakell_wall_hanging_sign", new TerraformWallHangingSignBlock(VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_TEXTURE, VonoImpetBlockTextureIdentifiers.MIRAKELL_HANGING_SIGN_GUI_TEXTURE, VonoImpetBlockSettings.MIRAKELL_WALL_HANGING_SIGN.dropsLike(MIRAKELL_HANGING_SIGN)));
-
+    public static final Block MIRAKELL_VINE = registerBlock("mirakell_vine", new VineBlock(VonoImpetBlockSettings.MIRAKELL_VINE));
+    // TODO: Better bushy vines item texture?
+    public static final Block MIRAKELL_BUSHY_VINES = registerBlock("mirakell_bushy_vines", new MirakellBushyVinesHeadBlock(VonoImpetBlockSettings.MIRAKELL_BUSHY_VINES));
+    public static final Block MIRAKELL_BUSHY_VINES_PLANT = registerBlockNoItem("mirakell_bushy_vines_plant", new MirakellBushyVinesBodyBlock(VonoImpetBlockSettings.MIRAKELL_BUSHY_VINES_PLANT));
     public static final BlockFamily MIRAKELL_FAMILY = BlockFamilies.register(MIRAKELL_PLANKS)
             .sign(MIRAKELL_SIGN, MIRAKELL_WALL_SIGN)
             .group("wooden").unlockCriterionName("has_planks").build();

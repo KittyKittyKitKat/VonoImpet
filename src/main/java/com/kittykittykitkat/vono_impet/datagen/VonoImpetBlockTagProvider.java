@@ -16,6 +16,13 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+        getOrCreateTagBuilder(BlockTags.CAVE_VINES)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT);
+
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(VonoImpetBlocks.MIRAKELL_LEAVES)
@@ -40,6 +47,9 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.MIRAKELL_HANGING_SIGN)
                 .add(VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN)
 //                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
+                .add(VonoImpetBlocks.MIRAKELL_VINE)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT)
                 .add(VonoImpetBlocks.VARSTER_LOG)
                 .add(VonoImpetBlocks.VARSTER_WOOD)
                 .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
@@ -169,11 +179,15 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
 
         getOrCreateTagBuilder(BlockTags.REPLACEABLE_BY_TREES)
                 .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.MIRAKELL_VINE)
                 .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.SWORD_EFFICIENT)
 //                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
                 .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.MIRAKELL_VINE)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT)
 //                .add(VonoImpetBlocks.VARSTER_SAPLING)
                 .add(VonoImpetBlocks.VARSTER_LEAVES);
 
@@ -221,5 +235,31 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN)
                 .add(VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN);
 
+        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                .add(VonoImpetBlocks.MIRAKELL_SAPLING);
+//                .add(VonoImpetBlocks.VARSTER_SAPLING);
+
+        getOrCreateTagBuilder(BlockTags.COMPLETES_FIND_TREE_TUTORIAL)
+                .add(VonoImpetBlocks.MIRAKELL_LOG)
+                .add(VonoImpetBlocks.MIRAKELL_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG)
+                .add(VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD)
+                .add(VonoImpetBlocks.MIRAKELL_LEAVES)
+                .add(VonoImpetBlocks.VARSTER_LOG)
+                .add(VonoImpetBlocks.VARSTER_WOOD)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_LOG)
+                .add(VonoImpetBlocks.STRIPPED_VARSTER_WOOD)
+                .add(VonoImpetBlocks.VARSTER_LEAVES);
+
+        getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                .add(VonoImpetBlocks.MIRAKELL_VINE)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES)
+                .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT);
+
+        getOrCreateTagBuilder(BlockTags.MANGROVE_LOGS_CAN_GROW_THROUGH)
+                .add(VonoImpetBlocks.MIRAKELL_VINE);
+
+        getOrCreateTagBuilder(BlockTags.MANGROVE_ROOTS_CAN_GROW_THROUGH)
+                .add(VonoImpetBlocks.MIRAKELL_VINE);
     }
 }

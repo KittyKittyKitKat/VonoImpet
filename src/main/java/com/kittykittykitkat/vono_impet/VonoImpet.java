@@ -8,6 +8,7 @@ import com.kittykittykitkat.vono_impet.item.VonoImpetItemGroups;
 import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
 import com.kittykittykitkat.vono_impet.particles.VonoImpetParticles;
 import com.kittykittykitkat.vono_impet.sound.VonoImpetSounds;
+import com.kittykittykitkat.vono_impet.world.gen.VonoImpetWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -30,8 +31,8 @@ public class VonoImpet implements ModInitializer {
 		VonoImpetSounds.registerSounds();
 		VonoImpetBlocks.registerBlocks();
 		VonoImpetItems.registerItems();
-		VonoImpetFeatures.registerFeatures();
 		VonoImpetBoats.registerBoats();
+		VonoImpetWorldGeneration.generateWorldGen();
 
 		registerCompostables();
 		registerFuels();
@@ -46,6 +47,9 @@ public class VonoImpet implements ModInitializer {
 
 	private void registerCompostables() {
 		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(VonoImpetBlocks.MIRAKELL_LEAVES, 0.3f);
+//		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(VonoImpetBlocks.MIRAKELL_SAPLING, 0.3f);
+		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(VonoImpetBlocks.VARSTER_LEAVES, 0.3f);
+//		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(VonoImpetBlocks.VARSTER_SAPLING, 0.3f);
 	}
 
 	private void registerFuels() {

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:scattered_ore",
+  "config": {
+    "discard_chance_on_air_exposure": 1.0,
+    "size": 3,
+    "targets": [
+      {
+        "state": {
+          "Name": "vono_impet:mirakell_planks"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:stone_ore_replaceables"
+        }
+      }
+    ]
+  }
+}

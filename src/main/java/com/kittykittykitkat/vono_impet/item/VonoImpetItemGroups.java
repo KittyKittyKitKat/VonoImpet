@@ -42,7 +42,9 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetItems.MIRAKELL_BOAT);
                         entries.add(VonoImpetItems.MIRAKELL_CHEST_BOAT);
                         entries.add(VonoImpetBlocks.MIRAKELL_LEAVES);
-//                        entries.add(VonoImpetBlocks.MIRAKELL_SAPLING);
+                        entries.add(VonoImpetBlocks.MIRAKELL_SAPLING);
+                        entries.add(VonoImpetBlocks.MIRAKELL_VINE);
+                        entries.add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES);
 
                         entries.add(VonoImpetBlocks.VARSTER_LOG);
                         entries.add(VonoImpetBlocks.VARSTER_WOOD);
