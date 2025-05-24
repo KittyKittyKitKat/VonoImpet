@@ -1,6 +1,7 @@
 package com.kittykittykitkat.vono_impet.block;
 
 import com.kittykittykitkat.vono_impet.world.tree.MirakellSaplingGenerator;
+import com.kittykittykitkat.vono_impet.world.tree.VarsterSaplingGenerator;
 import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
@@ -67,9 +68,8 @@ public class VonoImpetBlocks {
     public static final Block VARSTER_TRAPDOOR = registerBlock("varster_trapdoor", new TrapdoorBlock(VonoImpetBlockSettings.VARSTER_TRAPDOOR, VARSTER_WOOD_SET));
     public static final Block VARSTER_BUTTON = registerBlock("varster_button", new ButtonBlock(VonoImpetBlockSettings.VARSTER_BUTTON, VARSTER_WOOD_SET, 30, true));
     public static final Block VARSTER_PRESSURE_PLATE = registerBlock("varster_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, VonoImpetBlockSettings.VARSTER_PRESSURE_PLATE, VARSTER_WOOD_SET));
-//    public static final Block VARSTER_SAPLING = registerBlock("varster_sapling", new SaplingBlock(VonoImpetBlockSettings.VARSTER_SAPLING));
-//    public static final Block POTTED_VARSTER_SAPLING = registerBlockNoItem("potted_varster_sapling", new FlowerPotBlock(VARSTER_SAPLING, VonoImpetBlockSettings.POTTED_VARSTER_SAPLING));
-
+    public static final Block VARSTER_SAPLING = registerBlock("varster_sapling", new SaplingBlock(new VarsterSaplingGenerator(), VonoImpetBlockSettings.VARSTER_SAPLING));
+    public static final Block POTTED_VARSTER_SAPLING = registerBlockNoItem("potted_varster_sapling", new FlowerPotBlock(VARSTER_SAPLING, VonoImpetBlockSettings.POTTED_VARSTER_SAPLING));
     public static final Block VARSTER_SIGN = registerBlockNoItem("varster_sign", new TerraformSignBlock(VonoImpetBlockTextureIdentifiers.VARSTER_SIGN_TEXTURE, VonoImpetBlockSettings.VARSTER_SIGN));
     public static final Block VARSTER_WALL_SIGN = registerBlockNoItem("varster_wall_sign", new TerraformWallSignBlock(VonoImpetBlockTextureIdentifiers.VARSTER_SIGN_TEXTURE, VonoImpetBlockSettings.VARSTER_WALL_SIGN.dropsLike(VARSTER_SIGN)));
     public static final Block VARSTER_HANGING_SIGN = registerBlockNoItem("varster_hanging_sign", new TerraformHangingSignBlock(VonoImpetBlockTextureIdentifiers.VARSTER_HANGING_SIGN_TEXTURE, VonoImpetBlockTextureIdentifiers.VARSTER_HANGING_SIGN_GUI_TEXTURE, VonoImpetBlockSettings.VARSTER_HANGING_SIGN));

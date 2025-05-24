@@ -18,6 +18,7 @@
     "vono_impet:mirakell_wall_sign",
     "vono_impet:mirakell_hanging_sign",
     "vono_impet:mirakell_wall_hanging_sign",
+    "vono_impet:mirakell_sapling",
     "vono_impet:mirakell_vine",
     "vono_impet:mirakell_bushy_vines",
     "vono_impet:mirakell_bushy_vines_plant",
@@ -37,6 +38,7 @@
     "vono_impet:varster_sign",
     "vono_impet:varster_wall_sign",
     "vono_impet:varster_hanging_sign",
-    "vono_impet:varster_wall_hanging_sign"
+    "vono_impet:varster_wall_hanging_sign",
+    "vono_impet:varster_sapling"
   ]
 }

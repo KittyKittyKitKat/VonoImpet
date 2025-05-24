@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "vono_impet:potted_mirakell_sapling",
+    "vono_impet:potted_varster_sapling"
+  ]
 }

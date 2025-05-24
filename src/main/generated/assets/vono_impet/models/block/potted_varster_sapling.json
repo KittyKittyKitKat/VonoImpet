@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
-    "plant": "vono_impet:block/potted_mirakell_sapling"
+    "plant": "vono_impet:block/varster_sapling"
   }
 }

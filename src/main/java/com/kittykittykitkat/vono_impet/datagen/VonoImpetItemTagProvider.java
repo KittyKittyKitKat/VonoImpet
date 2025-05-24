@@ -91,7 +91,7 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 .add(VonoImpetItems.VARSTER_CHEST_BOAT);
 
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
-                .add(VonoImpetBlocks.MIRAKELL_SAPLING.asItem());
-//                .add(VonoImpetBlocks.VARSTER_SAPLING.asItem())
+                .add(VonoImpetBlocks.MIRAKELL_SAPLING.asItem())
+                .add(VonoImpetBlocks.VARSTER_SAPLING.asItem());
     }
 }

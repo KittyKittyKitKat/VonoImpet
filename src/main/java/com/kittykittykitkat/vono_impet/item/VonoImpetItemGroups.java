@@ -64,7 +64,7 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetItems.VARSTER_BOAT);
                         entries.add(VonoImpetItems.VARSTER_CHEST_BOAT);
                         entries.add(VonoImpetBlocks.VARSTER_LEAVES);
-//                        entries.add(VonoImpetBlocks.VARSTER_SAPLING);
+                        entries.add(VonoImpetBlocks.VARSTER_SAPLING);
                     }))
                     .build()
     );

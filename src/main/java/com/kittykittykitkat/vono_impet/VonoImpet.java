@@ -14,8 +14,12 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +30,12 @@ public class VonoImpet implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ResourceManagerHelper.registerBuiltinResourcePack(
+			new Identifier(MOD_ID, "bushy_leaves"),
+			FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
+			ResourcePackActivationType.NORMAL
+		);
+
 		VonoImpetParticles.registerParticles();
 		VonoImpetItemGroups.registerItemGroups();
 		VonoImpetSounds.registerSounds();

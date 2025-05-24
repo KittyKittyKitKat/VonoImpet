@@ -1,0 +1,7 @@
+{
+    "parent":"vono_impet:block/leaves_cross",
+    "textures": {
+        "all":"vono_impet:block/mirakell_leaves",
+	"bushy": "vono_impet:block/mirakell_leaves_bushy"
+    }
+}

@@ -1,10 +1,12 @@
 {
   "replace": false,
   "values": [
+    "vono_impet:mirakell_sapling",
     "vono_impet:mirakell_leaves",
     "vono_impet:mirakell_vine",
     "vono_impet:mirakell_bushy_vines",
     "vono_impet:mirakell_bushy_vines_plant",
+    "vono_impet:varster_sapling",
     "vono_impet:varster_leaves"
   ]
 }

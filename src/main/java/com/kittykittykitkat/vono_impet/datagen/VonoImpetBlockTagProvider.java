@@ -46,7 +46,7 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.MIRAKELL_WALL_SIGN)
                 .add(VonoImpetBlocks.MIRAKELL_HANGING_SIGN)
                 .add(VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN)
-//                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
+                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
                 .add(VonoImpetBlocks.MIRAKELL_VINE)
                 .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES)
                 .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT)
@@ -66,40 +66,12 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.VARSTER_SIGN)
                 .add(VonoImpetBlocks.VARSTER_WALL_SIGN)
                 .add(VonoImpetBlocks.VARSTER_HANGING_SIGN)
-                .add(VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN);
-//                .add(VonoImpetBlocks.VARSTER_SAPLING)
-
-        getOrCreateTagBuilder(BlockTags.SLABS)
-                .add(VonoImpetBlocks.MIRAKELL_SLAB)
-                .add(VonoImpetBlocks.VARSTER_SLAB);
-
-        getOrCreateTagBuilder(BlockTags.STAIRS)
-                .add(VonoImpetBlocks.MIRAKELL_STAIRS)
-                .add(VonoImpetBlocks.VARSTER_STAIRS);
-
-        getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(VonoImpetBlocks.MIRAKELL_FENCE)
-                .add(VonoImpetBlocks.VARSTER_FENCE);
+                .add(VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN)
+                .add(VonoImpetBlocks.VARSTER_SAPLING);
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(VonoImpetBlocks.MIRAKELL_FENCE_GATE)
                 .add(VonoImpetBlocks.VARSTER_FENCE_GATE);
-
-        getOrCreateTagBuilder(BlockTags.BUTTONS)
-                .add(VonoImpetBlocks.MIRAKELL_BUTTON)
-                .add(VonoImpetBlocks.VARSTER_BUTTON);
-
-        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
-            .add(VonoImpetBlocks.MIRAKELL_PRESSURE_PLATE)
-            .add(VonoImpetBlocks.VARSTER_PRESSURE_PLATE);
-
-        getOrCreateTagBuilder(BlockTags.TRAPDOORS)
-                .add(VonoImpetBlocks.MIRAKELL_TRAPDOOR)
-                .add(VonoImpetBlocks.VARSTER_TRAPDOOR);
-
-        getOrCreateTagBuilder(BlockTags.DOORS)
-                .add(VonoImpetBlocks.MIRAKELL_DOOR)
-                .add(VonoImpetBlocks.VARSTER_DOOR);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
                 .add(VonoImpetBlocks.MIRAKELL_SLAB)
@@ -183,17 +155,17 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.VARSTER_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.SWORD_EFFICIENT)
-//                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
+                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
                 .add(VonoImpetBlocks.MIRAKELL_LEAVES)
                 .add(VonoImpetBlocks.MIRAKELL_VINE)
                 .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES)
                 .add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT)
-//                .add(VonoImpetBlocks.VARSTER_SAPLING)
+                .add(VonoImpetBlocks.VARSTER_SAPLING)
                 .add(VonoImpetBlocks.VARSTER_LEAVES);
 
-        getOrCreateTagBuilder(BlockTags.FLOWER_POTS);
-//            .add(VonoImpetBlocks.POTTED_MIRAKELL_SAPLING);
-//            .add(VonoImpetBlocks.POTTED_VARSTER_SAPLING);
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+            .add(VonoImpetBlocks.POTTED_MIRAKELL_SAPLING)
+            .add(VonoImpetBlocks.POTTED_VARSTER_SAPLING);
 
         getOrCreateTagBuilder(BlockTags.LAVA_POOL_STONE_CANNOT_REPLACE)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
@@ -236,8 +208,8 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN);
 
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
-                .add(VonoImpetBlocks.MIRAKELL_SAPLING);
-//                .add(VonoImpetBlocks.VARSTER_SAPLING);
+                .add(VonoImpetBlocks.MIRAKELL_SAPLING)
+                .add(VonoImpetBlocks.VARSTER_SAPLING);
 
         getOrCreateTagBuilder(BlockTags.COMPLETES_FIND_TREE_TUTORIAL)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)

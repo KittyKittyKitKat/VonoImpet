@@ -42,7 +42,7 @@ public class VonoImpetBlockLootTableProvider extends FabricBlockLootTableProvide
         addDrop(VonoImpetBlocks.STRIPPED_VARSTER_LOG);
         addDrop(VonoImpetBlocks.STRIPPED_VARSTER_WOOD);
         // TODO: Drop Varster Anvi
-//        addDrop(VonoImpetBlocks.VARSTER_LEAVES, leavesDrops(VonoImpetBlocks.VARSTER_LEAVES, VonoImpetBlocks.VARSTER_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(VonoImpetBlocks.VARSTER_LEAVES, leavesDrops(VonoImpetBlocks.VARSTER_LEAVES, VonoImpetBlocks.VARSTER_SAPLING, SAPLING_DROP_CHANCE));
         addDrop(VonoImpetBlocks.VARSTER_PLANKS);
         addDrop(VonoImpetBlocks.VARSTER_SLAB, slabDrops(VonoImpetBlocks.VARSTER_SLAB));
         addDrop(VonoImpetBlocks.VARSTER_STAIRS);
@@ -52,8 +52,8 @@ public class VonoImpetBlockLootTableProvider extends FabricBlockLootTableProvide
         addDrop(VonoImpetBlocks.VARSTER_TRAPDOOR);
         addDrop(VonoImpetBlocks.VARSTER_BUTTON);
         addDrop(VonoImpetBlocks.VARSTER_PRESSURE_PLATE);
-//        addDrop(VonoImpetBlocks.VARSTER_SAPLING);
-//        addPottedPlantDrops(VonoImpetBlocks.POTTED_VARSTER_SAPLING);
+        addDrop(VonoImpetBlocks.VARSTER_SAPLING);
+        addPottedPlantDrops(VonoImpetBlocks.POTTED_VARSTER_SAPLING);
         addDrop(VonoImpetBlocks.VARSTER_SIGN);
         addDrop(VonoImpetBlocks.VARSTER_HANGING_SIGN);
     }

@@ -31,8 +31,7 @@ public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(VonoImpetBlocks.MIRAKELL_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(VonoImpetBlocks.MIRAKELL_TRAPDOOR);
         blockStateModelGenerator.registerHangingSign(VonoImpetBlocks.STRIPPED_MIRAKELL_LOG, VonoImpetBlocks.MIRAKELL_HANGING_SIGN, VonoImpetBlocks.MIRAKELL_WALL_HANGING_SIGN);
-        blockStateModelGenerator.registerTintableCross(VonoImpetBlocks.MIRAKELL_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(VonoImpetBlocks.POTTED_MIRAKELL_SAPLING, Blocks.FLOWER_POT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(VonoImpetBlocks.MIRAKELL_SAPLING, VonoImpetBlocks.POTTED_MIRAKELL_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(VonoImpetBlocks.MIRAKELL_BUSHY_VINES, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
 
@@ -50,8 +49,7 @@ public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(VonoImpetBlocks.VARSTER_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(VonoImpetBlocks.VARSTER_TRAPDOOR);
         blockStateModelGenerator.registerHangingSign(VonoImpetBlocks.STRIPPED_VARSTER_LOG, VonoImpetBlocks.VARSTER_HANGING_SIGN, VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN);
-//        blockStateModelGenerator.registerTintableCross(VonoImpetBlocks.VARSTER_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
-//        blockStateModelGenerator.registerFlowerPotPlant(VonoImpetBlocks.VARSTER_SAPLING, Blocks.FLOWER_POT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(VonoImpetBlocks.VARSTER_SAPLING, VonoImpetBlocks.POTTED_VARSTER_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
     }
 
