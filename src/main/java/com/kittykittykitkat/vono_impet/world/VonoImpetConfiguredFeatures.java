@@ -1,6 +1,7 @@
 package com.kittykittykitkat.vono_impet.world;
 
 import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
+import com.kittykittykitkat.vono_impet.tag.VonoImpetBlockTags;
 import com.kittykittykitkat.vono_impet.world.tree.LeavesMirakellVineTreeDecorator;
 import net.minecraft.block.AbstractPlantStemBlock;
 import net.minecraft.block.Block;
@@ -42,8 +43,7 @@ public class VonoImpetConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<Block> registryEntryLookup = context.getRegistryLookup(RegistryKeys.BLOCK);
 
-        // TODO: Replace with Hadelite
-        RuleTest hadeliteReplacables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest hadeliteReplacables = new TagMatchRuleTest(VonoImpetBlockTags.HADELITE_ORE_REPLACEABLES);
         // TODO: Replace with Unrefined Crynia
         List<OreFeatureConfig.Target> unrefinedCryniaDeposit = List.of(
                 OreFeatureConfig.createTarget(hadeliteReplacables, VonoImpetBlocks.MIRAKELL_PLANKS.getDefaultState())
@@ -89,8 +89,7 @@ public class VonoImpetConfiguredFeatures {
                 new UpwardsBranchingTrunkPlacer(
                         4, 1, 9, UniformIntProvider.create(1, 5), 0.75F, UniformIntProvider.create(0, 1), RegistryEntryList.of()
                 ),
-                BlockStateProvider.of(Blocks.SPRUCE_LEAVES),
-//                BlockStateProvider.of(VonoImpetBlocks.VARSTER_LEAVES),
+                BlockStateProvider.of(VonoImpetBlocks.VARSTER_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)
         )
@@ -100,8 +99,7 @@ public class VonoImpetConfiguredFeatures {
                                         0.75F,
                                         0,
                                         0,
-//                                        SimpleBlockStateProvider.of(VonoImpetBlocks.VARSTER_LEAVES.getDefaultState()),
-                                        SimpleBlockStateProvider.of(Blocks.SPRUCE_LEAVES.getDefaultState()),
+                                        SimpleBlockStateProvider.of(VonoImpetBlocks.VARSTER_LEAVES.getDefaultState()),
                                         2,
                                         List.of(Direction.DOWN, Direction.UP, Direction.SOUTH, Direction.NORTH, Direction.WEST, Direction.EAST)
                                 )
@@ -109,8 +107,6 @@ public class VonoImpetConfiguredFeatures {
                 )
                 .ignoreVines()
                 .build());
-
-
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vono_impet:block/hadelite_brick_slab"
+    },
+    "type=double": {
+      "model": "vono_impet:block/hadelite_bricks"
+    },
+    "type=top": {
+      "model": "vono_impet:block/hadelite_brick_slab_top"
+    }
+  }
+}

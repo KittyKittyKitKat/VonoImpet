@@ -65,7 +65,7 @@ public class LeavesMirakellVineTreeDecorator extends TreeDecorator {
 
     public static void placeMirakellVines(BlockPos pos, BooleanProperty faceProperty, Generator generator) {
         generator.replace(pos, VonoImpetBlocks.MIRAKELL_VINE.getDefaultState().with(faceProperty,true));
-        int i = 4;
+        int i = 3;
 
         for (BlockPos var4 = pos.down(); generator.isAir(var4) && i > 0; i--) {
             generator.replace(var4,  VonoImpetBlocks.MIRAKELL_VINE.getDefaultState().with(faceProperty, true));

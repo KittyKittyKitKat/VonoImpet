@@ -93,5 +93,11 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(VonoImpetBlocks.MIRAKELL_SAPLING.asItem())
                 .add(VonoImpetBlocks.VARSTER_SAPLING.asItem());
+
+        getOrCreateTagBuilder(ItemTags.STONE_TOOL_MATERIALS)
+                .add(VonoImpetBlocks.HADELITE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.STONE_CRAFTING_MATERIALS)
+                .add(VonoImpetBlocks.HADELITE.asItem());
     }
 }

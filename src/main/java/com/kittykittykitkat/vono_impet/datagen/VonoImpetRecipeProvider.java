@@ -23,6 +23,10 @@ public class VonoImpetRecipeProvider extends FabricRecipeProvider {
         createStairsRecipe(output, Ingredient.ofItems(input)).criterion(hasItem(input), conditionsFromItem(input)).offerTo(exporter);
     }
 
+    public static void offerButtonRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+        createTransmutationRecipe(output, Ingredient.ofItems(input)).criterion(hasItem(input), conditionsFromItem(input)).offerTo(exporter);
+    }
+
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
@@ -33,7 +37,7 @@ public class VonoImpetRecipeProvider extends FabricRecipeProvider {
     public static void offerMirakellRecipes(Consumer<RecipeJsonProvider> exporter) {
         offerBarkBlockRecipe(exporter, VonoImpetBlocks.MIRAKELL_WOOD, VonoImpetBlocks.MIRAKELL_LOG);
         offerBarkBlockRecipe(exporter, VonoImpetBlocks.STRIPPED_MIRAKELL_WOOD, VonoImpetBlocks.STRIPPED_MIRAKELL_LOG);
-        offerPlanksRecipe2(exporter, VonoImpetBlocks.MIRAKELL_PLANKS, VonoImpetItemTags.MIRAKELL_LOGS, 4);
+        offerPlanksRecipe(exporter, VonoImpetBlocks.MIRAKELL_PLANKS, VonoImpetItemTags.MIRAKELL_LOGS, 4);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.MIRAKELL_SLAB, VonoImpetBlocks.MIRAKELL_PLANKS);
         offerStairsRecipe(exporter, VonoImpetBlocks.MIRAKELL_STAIRS, VonoImpetBlocks.MIRAKELL_PLANKS);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.MIRAKELL_FENCE, 3)
@@ -65,7 +69,7 @@ public class VonoImpetRecipeProvider extends FabricRecipeProvider {
     public static void offerVarsterRecipes(Consumer<RecipeJsonProvider> exporter) {
         offerBarkBlockRecipe(exporter, VonoImpetBlocks.VARSTER_WOOD, VonoImpetBlocks.VARSTER_LOG);
         offerBarkBlockRecipe(exporter, VonoImpetBlocks.STRIPPED_VARSTER_WOOD, VonoImpetBlocks.STRIPPED_VARSTER_LOG);
-        offerPlanksRecipe2(exporter, VonoImpetBlocks.VARSTER_PLANKS, VonoImpetItemTags.VARSTER_LOGS, 4);
+        offerPlanksRecipe(exporter, VonoImpetBlocks.VARSTER_PLANKS, VonoImpetItemTags.VARSTER_LOGS, 4);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.VARSTER_SLAB, VonoImpetBlocks.VARSTER_PLANKS);
         offerStairsRecipe(exporter, VonoImpetBlocks.VARSTER_STAIRS, VonoImpetBlocks.VARSTER_PLANKS);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.VARSTER_FENCE, 3)
@@ -92,5 +96,101 @@ public class VonoImpetRecipeProvider extends FabricRecipeProvider {
         offerHangingSignRecipe(exporter, VonoImpetBlocks.VARSTER_HANGING_SIGN, VonoImpetBlocks.STRIPPED_VARSTER_LOG);
         offerBoatRecipe(exporter, VonoImpetItems.VARSTER_BOAT, VonoImpetBlocks.VARSTER_PLANKS);
         offerChestBoatRecipe(exporter, VonoImpetItems.VARSTER_CHEST_BOAT, VonoImpetItems.VARSTER_BOAT);
+    }
+
+    public static void offerHadeliteRecipes(Consumer<RecipeJsonProvider> exporter) {
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_SLAB, VonoImpetBlocks.HADELITE);
+        offerStairsRecipe(exporter, VonoImpetBlocks.HADELITE_STAIRS, VonoImpetBlocks.HADELITE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_WALL, VonoImpetBlocks.HADELITE);
+        offerButtonRecipe(exporter, VonoImpetBlocks.HADELITE_BUTTON, VonoImpetBlocks.HADELITE);
+        offerPressurePlateRecipe(exporter, VonoImpetBlocks.HADELITE_PRESSURE_PLATE, VonoImpetBlocks.HADELITE);
+
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE_SLAB, VonoImpetBlocks.POLISHED_HADELITE);
+        offerStairsRecipe(exporter, VonoImpetBlocks.POLISHED_HADELITE_STAIRS, VonoImpetBlocks.POLISHED_HADELITE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE_WALL, VonoImpetBlocks.POLISHED_HADELITE);
+
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_BRICKS);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILE_SLAB, VonoImpetBlocks.HADELITE_TILES);
+        offerStairsRecipe(exporter, VonoImpetBlocks.HADELITE_TILE_STAIRS, VonoImpetBlocks.HADELITE_TILES);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILE_WALL, VonoImpetBlocks.HADELITE_TILES);
+        offerCrackingRecipe(exporter, VonoImpetBlocks.CRACKED_HADELITE_TILES, VonoImpetBlocks.HADELITE_TILES);
+
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.POLISHED_HADELITE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICK_SLAB, VonoImpetBlocks.HADELITE_BRICKS);
+        offerStairsRecipe(exporter, VonoImpetBlocks.HADELITE_BRICK_STAIRS, VonoImpetBlocks.HADELITE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICK_WALL, VonoImpetBlocks.HADELITE_BRICKS);
+        offerCrackingRecipe(exporter, VonoImpetBlocks.CRACKED_HADELITE_BRICKS, VonoImpetBlocks.HADELITE_BRICKS);
+
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.CHISELED_HADELITE_BRICKS, VonoImpetBlocks.HADELITE_SLAB);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_PILLAR, VonoImpetBlocks.POLISHED_HADELITE);
+        offerBarkBlockRecipe(exporter, VonoImpetBlocks.HADELITE_CORNER_PILLAR, VonoImpetBlocks.HADELITE_PILLAR);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.POLISHED_HADELITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.POLISHED_HADELITE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.POLISHED_HADELITE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.POLISHED_HADELITE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_TILE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_TILE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_TILE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_BRICK_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_BRICK_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_PILLAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE, VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.POLISHED_HADELITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.POLISHED_HADELITE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.POLISHED_HADELITE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.POLISHED_HADELITE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_TILE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_TILE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_TILE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_BRICK_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_BRICK_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_PILLAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.POLISHED_HADELITE, VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.POLISHED_HADELITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.POLISHED_HADELITE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.POLISHED_HADELITE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.POLISHED_HADELITE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_TILE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_TILE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_TILE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_BRICK_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_BRICK_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_PILLAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_BRICKS, VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.POLISHED_HADELITE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.POLISHED_HADELITE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.POLISHED_HADELITE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.POLISHED_HADELITE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_TILES);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_TILE_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_TILE_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_TILE_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_BRICK_SLAB, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_BRICK_WALL);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_PILLAR);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_CORNER_PILLAR);
     }
 }

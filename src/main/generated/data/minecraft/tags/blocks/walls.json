@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "vono_impet:hadelite_wall",
+    "vono_impet:polished_hadelite_wall",
+    "vono_impet:hadelite_tile_wall",
+    "vono_impet:hadelite_brick_wall"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vono_impet:block/hadelite_tile_slab"
+    },
+    "type=double": {
+      "model": "vono_impet:block/hadelite_tiles"
+    },
+    "type=top": {
+      "model": "vono_impet:block/hadelite_tile_slab_top"
+    }
+  }
+}

@@ -4,7 +4,6 @@ import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
 import com.kittykittykitkat.vono_impet.entity.VonoImpetBoats;
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.HangingSignItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;

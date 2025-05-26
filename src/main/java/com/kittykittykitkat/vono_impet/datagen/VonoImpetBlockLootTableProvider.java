@@ -56,5 +56,30 @@ public class VonoImpetBlockLootTableProvider extends FabricBlockLootTableProvide
         addPottedPlantDrops(VonoImpetBlocks.POTTED_VARSTER_SAPLING);
         addDrop(VonoImpetBlocks.VARSTER_SIGN);
         addDrop(VonoImpetBlocks.VARSTER_HANGING_SIGN);
+
+        addDrop(VonoImpetBlocks.HADELITE);
+        addDrop(VonoImpetBlocks.HADELITE_SLAB, slabDrops(VonoImpetBlocks.HADELITE_SLAB));
+        addDrop(VonoImpetBlocks.HADELITE_STAIRS);
+        addDrop(VonoImpetBlocks.HADELITE_WALL);
+        addDrop(VonoImpetBlocks.HADELITE_BUTTON);
+        addDrop(VonoImpetBlocks.HADELITE_PRESSURE_PLATE);
+        addDrop(VonoImpetBlocks.POLISHED_HADELITE);
+        addDrop(VonoImpetBlocks.POLISHED_HADELITE_SLAB, slabDrops(VonoImpetBlocks.POLISHED_HADELITE_SLAB));
+        addDrop(VonoImpetBlocks.POLISHED_HADELITE_STAIRS);
+        addDrop(VonoImpetBlocks.POLISHED_HADELITE_WALL);
+        addDrop(VonoImpetBlocks.HADELITE_TILES);
+        addDrop(VonoImpetBlocks.HADELITE_TILE_SLAB, slabDrops(VonoImpetBlocks.HADELITE_TILE_SLAB));
+        addDrop(VonoImpetBlocks.HADELITE_TILE_STAIRS);
+        addDrop(VonoImpetBlocks.HADELITE_TILE_WALL);
+        addDrop(VonoImpetBlocks.CRACKED_HADELITE_TILES);
+        addDrop(VonoImpetBlocks.HADELITE_BRICKS);
+        addDrop(VonoImpetBlocks.HADELITE_BRICK_SLAB, slabDrops(VonoImpetBlocks.HADELITE_BRICK_SLAB));
+        addDrop(VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+        addDrop(VonoImpetBlocks.HADELITE_BRICK_WALL);
+        addDrop(VonoImpetBlocks.CRACKED_HADELITE_BRICKS);
+        addDrop(VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
+        addDrop(VonoImpetBlocks.HADELITE_PILLAR);
+        addDrop(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
     }
 }

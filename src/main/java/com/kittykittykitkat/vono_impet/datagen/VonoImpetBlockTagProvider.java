@@ -233,5 +233,52 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
 
         getOrCreateTagBuilder(BlockTags.MANGROVE_ROOTS_CAN_GROW_THROUGH)
                 .add(VonoImpetBlocks.MIRAKELL_VINE);
+
+        getOrCreateTagBuilder(BlockTags.SLABS)
+                .add(VonoImpetBlocks.HADELITE_SLAB)
+                .add(VonoImpetBlocks.POLISHED_HADELITE_SLAB)
+                .add(VonoImpetBlocks.HADELITE_TILE_SLAB)
+                .add(VonoImpetBlocks.HADELITE_BRICK_SLAB);
+
+        getOrCreateTagBuilder(BlockTags.STAIRS)
+                .add(VonoImpetBlocks.HADELITE_STAIRS)
+                .add(VonoImpetBlocks.POLISHED_HADELITE_STAIRS)
+                .add(VonoImpetBlocks.HADELITE_TILE_STAIRS)
+                .add(VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(VonoImpetBlocks.HADELITE_WALL)
+                .add(VonoImpetBlocks.POLISHED_HADELITE_WALL)
+                .add(VonoImpetBlocks.HADELITE_TILE_WALL)
+                .add(VonoImpetBlocks.HADELITE_BRICK_WALL);
+
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(VonoImpetBlocks.HADELITE)
+                .add(VonoImpetBlocks.HADELITE_SLAB)
+                .add(VonoImpetBlocks.HADELITE_STAIRS)
+                .add(VonoImpetBlocks.HADELITE_WALL)
+                .add(VonoImpetBlocks.HADELITE_BUTTON)
+                .add(VonoImpetBlocks.HADELITE_PRESSURE_PLATE)
+                .add(VonoImpetBlocks.POLISHED_HADELITE)
+                .add(VonoImpetBlocks.POLISHED_HADELITE_SLAB)
+                .add(VonoImpetBlocks.POLISHED_HADELITE_STAIRS)
+                .add(VonoImpetBlocks.POLISHED_HADELITE_WALL)
+                .add(VonoImpetBlocks.HADELITE_TILES)
+                .add(VonoImpetBlocks.HADELITE_TILE_SLAB)
+                .add(VonoImpetBlocks.HADELITE_TILE_STAIRS)
+                .add(VonoImpetBlocks.HADELITE_TILE_WALL)
+                .add(VonoImpetBlocks.CRACKED_HADELITE_TILES)
+                .add(VonoImpetBlocks.HADELITE_BRICKS)
+                .add(VonoImpetBlocks.HADELITE_BRICK_SLAB)
+                .add(VonoImpetBlocks.HADELITE_BRICK_STAIRS)
+                .add(VonoImpetBlocks.HADELITE_BRICK_WALL)
+                .add(VonoImpetBlocks.CRACKED_HADELITE_BRICKS)
+                .add(VonoImpetBlocks.CHISELED_HADELITE_BRICKS)
+                .add(VonoImpetBlocks.HADELITE_PILLAR)
+                .add(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
+        getOrCreateTagBuilder(VonoImpetBlockTags.HADELITE_ORE_REPLACEABLES)
+                .add(VonoImpetBlocks.HADELITE);
+
     }
 }

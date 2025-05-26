@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "vono_impet:block/hadelite",
+    "side": "vono_impet:block/hadelite",
+    "top": "vono_impet:block/hadelite"
+  }
+}

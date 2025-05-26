@@ -65,6 +65,30 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetItems.VARSTER_CHEST_BOAT);
                         entries.add(VonoImpetBlocks.VARSTER_LEAVES);
                         entries.add(VonoImpetBlocks.VARSTER_SAPLING);
+
+                        entries.add(VonoImpetBlocks.HADELITE);
+                        entries.add(VonoImpetBlocks.HADELITE_SLAB);
+                        entries.add(VonoImpetBlocks.HADELITE_STAIRS);
+                        entries.add(VonoImpetBlocks.HADELITE_WALL);
+                        entries.add(VonoImpetBlocks.HADELITE_BUTTON);
+                        entries.add(VonoImpetBlocks.HADELITE_PRESSURE_PLATE);
+                        entries.add(VonoImpetBlocks.POLISHED_HADELITE);
+                        entries.add(VonoImpetBlocks.POLISHED_HADELITE_SLAB);
+                        entries.add(VonoImpetBlocks.POLISHED_HADELITE_STAIRS);
+                        entries.add(VonoImpetBlocks.POLISHED_HADELITE_WALL);
+                        entries.add(VonoImpetBlocks.HADELITE_TILES);
+                        entries.add(VonoImpetBlocks.HADELITE_TILE_SLAB);
+                        entries.add(VonoImpetBlocks.HADELITE_TILE_STAIRS);
+                        entries.add(VonoImpetBlocks.HADELITE_TILE_WALL);
+                        entries.add(VonoImpetBlocks.CRACKED_HADELITE_TILES);
+                        entries.add(VonoImpetBlocks.HADELITE_BRICKS);
+                        entries.add(VonoImpetBlocks.HADELITE_BRICK_SLAB);
+                        entries.add(VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+                        entries.add(VonoImpetBlocks.HADELITE_BRICK_WALL);
+                        entries.add(VonoImpetBlocks.CRACKED_HADELITE_BRICKS);
+                        entries.add(VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
+                        entries.add(VonoImpetBlocks.HADELITE_PILLAR);
+                        entries.add(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
                     }))
                     .build()
     );

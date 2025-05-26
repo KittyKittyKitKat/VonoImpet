@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "vono_impet:block/hadelite_tiles",
+    "side": "vono_impet:block/hadelite_tiles",
+    "top": "vono_impet:block/hadelite_tiles"
+  }
+}

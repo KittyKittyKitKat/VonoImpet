@@ -8,6 +8,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TexturedModel;
 
 public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
     public VonoImpetBlockStateModelProvider(FabricDataOutput output) {
@@ -47,10 +48,33 @@ public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
                 .pressurePlate(VonoImpetBlocks.VARSTER_PRESSURE_PLATE)
                 .family(VonoImpetBlocks.VARSTER_FAMILY);
         blockStateModelGenerator.registerDoor(VonoImpetBlocks.VARSTER_DOOR);
-        blockStateModelGenerator.registerOrientableTrapdoor(VonoImpetBlocks.VARSTER_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(VonoImpetBlocks.VARSTER_TRAPDOOR);
         blockStateModelGenerator.registerHangingSign(VonoImpetBlocks.STRIPPED_VARSTER_LOG, VonoImpetBlocks.VARSTER_HANGING_SIGN, VonoImpetBlocks.VARSTER_WALL_HANGING_SIGN);
         blockStateModelGenerator.registerFlowerPotPlant(VonoImpetBlocks.VARSTER_SAPLING, VonoImpetBlocks.POTTED_VARSTER_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(VonoImpetBlocks.HADELITE)
+                .stairs(VonoImpetBlocks.HADELITE_STAIRS)
+                .slab(VonoImpetBlocks.HADELITE_SLAB)
+                .button(VonoImpetBlocks.HADELITE_BUTTON)
+                .pressurePlate(VonoImpetBlocks.HADELITE_PRESSURE_PLATE)
+                .wall(VonoImpetBlocks.HADELITE_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(VonoImpetBlocks.POLISHED_HADELITE)
+                .stairs(VonoImpetBlocks.POLISHED_HADELITE_STAIRS)
+                .slab(VonoImpetBlocks.POLISHED_HADELITE_SLAB)
+                .wall(VonoImpetBlocks.POLISHED_HADELITE_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(VonoImpetBlocks.HADELITE_TILES)
+                .stairs(VonoImpetBlocks.HADELITE_TILE_STAIRS)
+                .slab(VonoImpetBlocks.HADELITE_TILE_SLAB)
+                .wall(VonoImpetBlocks.HADELITE_TILE_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.CRACKED_HADELITE_TILES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(VonoImpetBlocks.HADELITE_BRICKS)
+                .stairs(VonoImpetBlocks.HADELITE_BRICK_STAIRS)
+                .slab(VonoImpetBlocks.HADELITE_BRICK_SLAB)
+                .wall(VonoImpetBlocks.HADELITE_BRICK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.CRACKED_HADELITE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
+        blockStateModelGenerator.registerAxisRotated(VonoImpetBlocks.HADELITE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
     }
 
     @Override
