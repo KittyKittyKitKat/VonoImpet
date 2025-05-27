@@ -17,20 +17,23 @@ import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.intprovider.BiasedToBottomIntProvider;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
+import net.minecraft.world.gen.root.AboveRootPlacement;
+import net.minecraft.world.gen.root.MangroveRootPlacement;
+import net.minecraft.world.gen.root.MangroveRootPlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AttachedToLeavesTreeDecorator;
-import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-import net.minecraft.world.gen.trunk.UpwardsBranchingTrunkPlacer;
+import net.minecraft.world.gen.trunk.*;
 
 import java.util.List;
+import java.util.Optional;
 
 import static com.kittykittykitkat.vono_impet.VonoImpet.MOD_ID;
 
@@ -86,11 +89,35 @@ public class VonoImpetConfiguredFeatures {
 
         register(context, VARSTER_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG),
-                new UpwardsBranchingTrunkPlacer(
-                        4, 1, 9, UniformIntProvider.create(1, 5), 0.75F, UniformIntProvider.create(0, 1), RegistryEntryList.of()
+                new ForkingTrunkPlacer(
+                        6,
+                        1,
+                        2
                 ),
                 BlockStateProvider.of(VonoImpetBlocks.VARSTER_LEAVES),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+                new AcaciaFoliagePlacer(
+                        BiasedToBottomIntProvider.create(2, 2),
+                        ConstantIntProvider.create(0)
+                ),
+                Optional.of(new MangroveRootPlacer(
+                        UniformIntProvider.create(1, 2),
+                        BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG),
+                        Optional.of(
+                                new AboveRootPlacement(
+                                        BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG),
+                                        0.2F
+                                )
+                        ),
+                        new MangroveRootPlacement(
+                                registryEntryLookup.getOrThrow(BlockTags.MANGROVE_ROOTS_CAN_GROW_THROUGH),
+                                registryEntryLookup.getOrThrow(BlockTags.DIRT),
+                                BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG),
+                                2,
+                                2,
+                                0
+                        )
+
+                )),
                 new TwoLayersFeatureSize(1, 0, 2)
         )
                 .decorators(
@@ -105,6 +132,7 @@ public class VonoImpetConfiguredFeatures {
                                 )
                         )
                 )
+                .dirtProvider(BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG))
                 .ignoreVines()
                 .build());
     }
