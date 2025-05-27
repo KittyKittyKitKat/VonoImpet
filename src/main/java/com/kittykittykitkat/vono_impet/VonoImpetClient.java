@@ -2,7 +2,7 @@ package com.kittykittykitkat.vono_impet;
 
 import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
 import com.kittykittykitkat.vono_impet.entity.VonoImpetBoats;
-import com.kittykittykitkat.vono_impet.particles.VonoImpetParticles;
+import com.kittykittykitkat.vono_impet.particle.VonoImpetParticles;
 import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;

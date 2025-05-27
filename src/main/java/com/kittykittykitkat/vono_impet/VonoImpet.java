@@ -5,7 +5,7 @@ import com.kittykittykitkat.vono_impet.compat.VonoImpetDramaticDoors;
 import com.kittykittykitkat.vono_impet.entity.VonoImpetBoats;
 import com.kittykittykitkat.vono_impet.item.VonoImpetItemGroups;
 import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
-import com.kittykittykitkat.vono_impet.particles.VonoImpetParticles;
+import com.kittykittykitkat.vono_impet.particle.VonoImpetParticles;
 import com.kittykittykitkat.vono_impet.sound.VonoImpetSoundsEvents;
 import com.kittykittykitkat.vono_impet.world.gen.VonoImpetWorldGeneration;
 import net.fabricmc.api.ModInitializer;

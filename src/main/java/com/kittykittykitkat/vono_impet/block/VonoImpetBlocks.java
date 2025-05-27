@@ -58,10 +58,11 @@ public class VonoImpetBlocks {
 
     public static final Block MIRAKELL_LEAVES = registerBlock(
             "mirakell_leaves",
-            new LeavesBlock(
+            new MirakellLeavesBlock(
                     FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)
             )
     );
+
     public static final Block MIRAKELL_PLANKS = registerBlock(
             "mirakell_planks",
             new Block(
