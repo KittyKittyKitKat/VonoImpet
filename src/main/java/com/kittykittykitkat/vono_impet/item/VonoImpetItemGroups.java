@@ -89,6 +89,8 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
                         entries.add(VonoImpetBlocks.HADELITE_PILLAR);
                         entries.add(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
+                        entries.add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
                     }))
                     .build()
     );

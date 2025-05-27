@@ -3,11 +3,10 @@ package com.kittykittykitkat.vono_impet;
 import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
 import com.kittykittykitkat.vono_impet.compat.VonoImpetDramaticDoors;
 import com.kittykittykitkat.vono_impet.entity.VonoImpetBoats;
-import com.kittykittykitkat.vono_impet.feature.VonoImpetFeatures;
 import com.kittykittykitkat.vono_impet.item.VonoImpetItemGroups;
 import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
 import com.kittykittykitkat.vono_impet.particles.VonoImpetParticles;
-import com.kittykittykitkat.vono_impet.sound.VonoImpetSounds;
+import com.kittykittykitkat.vono_impet.sound.VonoImpetSoundsEvents;
 import com.kittykittykitkat.vono_impet.world.gen.VonoImpetWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,7 +16,6 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -27,6 +25,8 @@ public class VonoImpet implements ModInitializer {
 	public static final String MOD_ID = "vono_impet";
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	// TODO: Proper volumes and weights for all the various biome ambient sounds
 
 	@Override
 	public void onInitialize() {
@@ -38,7 +38,7 @@ public class VonoImpet implements ModInitializer {
 
 		VonoImpetParticles.registerParticles();
 		VonoImpetItemGroups.registerItemGroups();
-		VonoImpetSounds.registerSounds();
+		VonoImpetSoundsEvents.registerSounds();
 		VonoImpetBlocks.registerBlocks();
 		VonoImpetItems.registerItems();
 		VonoImpetBoats.registerBoats();

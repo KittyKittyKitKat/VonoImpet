@@ -84,5 +84,7 @@ public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(VonoImpetItems.VARSTER_BOAT, Models.GENERATED);
         itemModelGenerator.register(VonoImpetItems.VARSTER_CHEST_BOAT, Models.GENERATED);
+
+        itemModelGenerator.register(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA, Models.TEMPLATE_MUSIC_DISC);
     }
 }

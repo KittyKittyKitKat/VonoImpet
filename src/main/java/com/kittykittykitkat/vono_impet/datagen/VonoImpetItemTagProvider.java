@@ -99,5 +99,11 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
 
         getOrCreateTagBuilder(ItemTags.STONE_CRAFTING_MATERIALS)
                 .add(VonoImpetBlocks.HADELITE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
+                .add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
+
+        getOrCreateTagBuilder(VonoImpetItemTags.WRETCHED_DROP_MUSIC_DISCS)
+                .add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
     }
 }
