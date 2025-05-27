@@ -25,9 +25,9 @@ public class VonoImpetClient implements ClientModInitializer {
                 VonoImpetBlocks.MIRAKELL_BUSHY_VINES_PLANT,
                 VonoImpetBlocks.VARSTER_LEAVES,
                 VonoImpetBlocks.VARSTER_DOOR,
-                VonoImpetBlocks.VARSTER_TRAPDOOR
-//                VonoImpetBlocks.VARSTER_SAPLING,
-//                VonoImpetBlocks.POTTED_VARSTER_SAPLING
+                VonoImpetBlocks.VARSTER_TRAPDOOR,
+                VonoImpetBlocks.VARSTER_SAPLING,
+                VonoImpetBlocks.POTTED_VARSTER_SAPLING
         );
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent()
@@ -40,11 +40,5 @@ public class VonoImpetClient implements ClientModInitializer {
 //            BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
 //            );
         }
-
-//        BlockEntityRendererFactories.register(VONO_IMPET_SIGN_BLOCK_ENTITY, SignBlockEntityRenderer::new);
-//        BlockEntityRendererFactories.register(VONO_IMPET_HANGING_SIGN_BLOCK_ENTITY, HangingSignBlockEntityRenderer::new);
-
-//        TerraformBoatClientHelper.registerModelLayers(VonoImpetBoats., false);
-//        TerraformBoatClientHelper.registerModelLayers(VonoImpetBoats., false);
     }
 }

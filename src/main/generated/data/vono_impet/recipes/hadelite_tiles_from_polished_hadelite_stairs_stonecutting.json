@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "vono_impet:polished_hadelite_stairs"
+  },
+  "result": "vono_impet:hadelite_tiles"
+}

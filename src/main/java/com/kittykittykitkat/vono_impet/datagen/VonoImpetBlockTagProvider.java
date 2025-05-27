@@ -275,10 +275,19 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.CRACKED_HADELITE_BRICKS)
                 .add(VonoImpetBlocks.CHISELED_HADELITE_BRICKS)
                 .add(VonoImpetBlocks.HADELITE_PILLAR)
-                .add(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+                .add(VonoImpetBlocks.HADELITE_CORNER_PILLAR)
+                .add(VonoImpetBlocks.UNREFINED_CRYNIA)
+                .add(VonoImpetBlocks.CRYNIA_BLOCK);
 
         getOrCreateTagBuilder(VonoImpetBlockTags.HADELITE_ORE_REPLACEABLES)
                 .add(VonoImpetBlocks.HADELITE);
+
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(VonoImpetBlocks.UNREFINED_CRYNIA)
+                .add(VonoImpetBlocks.CRYNIA_BLOCK);
+
+        getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
+                .add(VonoImpetBlocks.CRYNIA_BLOCK);
 
     }
 }

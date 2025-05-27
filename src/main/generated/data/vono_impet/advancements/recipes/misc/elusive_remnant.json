@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "vono_impet:elusive_remnant"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unrefined_crynia": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "vono_impet:unrefined_crynia"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_unrefined_crynia",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vono_impet:elusive_remnant"
+    ]
+  },
+  "sends_telemetry_event": false
+}

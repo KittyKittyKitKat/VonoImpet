@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "crynia_ingot",
+  "ingredients": [
+    {
+      "item": "vono_impet:elusive_remnant"
+    },
+    {
+      "item": "vono_impet:elusive_remnant"
+    },
+    {
+      "item": "vono_impet:elusive_remnant"
+    },
+    {
+      "item": "vono_impet:elusive_remnant"
+    },
+    {
+      "item": "vono_impet:potential_spark"
+    },
+    {
+      "item": "vono_impet:potential_spark"
+    },
+    {
+      "item": "vono_impet:potential_spark"
+    },
+    {
+      "item": "vono_impet:potential_spark"
+    }
+  ],
+  "result": {
+    "item": "vono_impet:crynia_ingot"
+  }
+}

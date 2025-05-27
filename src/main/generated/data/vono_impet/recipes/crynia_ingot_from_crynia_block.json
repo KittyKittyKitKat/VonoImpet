@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "crynia_ingot",
+  "ingredients": [
+    {
+      "item": "vono_impet:crynia_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "vono_impet:crynia_ingot"
+  }
+}

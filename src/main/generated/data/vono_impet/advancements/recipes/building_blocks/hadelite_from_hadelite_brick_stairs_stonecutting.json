@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hadelite_brick_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "vono_impet:hadelite_brick_stairs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:hadelite_from_hadelite_brick_stairs_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_hadelite_brick_stairs",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:hadelite_from_hadelite_brick_stairs_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

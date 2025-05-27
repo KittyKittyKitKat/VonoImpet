@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "vono_impet:hadelite_brick_wall"
+  },
+  "result": "vono_impet:hadelite_tiles"
+}

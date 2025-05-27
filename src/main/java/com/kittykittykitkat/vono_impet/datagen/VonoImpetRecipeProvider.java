@@ -5,8 +5,11 @@ import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
 import com.kittykittykitkat.vono_impet.tag.VonoImpetItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.server.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -32,6 +35,8 @@ public class VonoImpetRecipeProvider extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerMirakellRecipes(exporter);
         offerVarsterRecipes(exporter);
+        offerHadeliteRecipes(exporter);
+        offerCryniaRecipes(exporter);
     }
 
     public static void offerMirakellRecipes(Consumer<RecipeJsonProvider> exporter) {
@@ -192,5 +197,91 @@ public class VonoImpetRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_PILLAR);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, VonoImpetBlocks.HADELITE_TILES, VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+    }
+
+    public static void offerCryniaRecipes(Consumer<RecipeJsonProvider> exporter) {
+        CookingRecipeJsonBuilder.createSmelting(
+                Ingredient.ofItems(VonoImpetBlocks.UNREFINED_CRYNIA),
+                RecipeCategory.MISC,
+                VonoImpetItems.ELUSIVE_REMNANT,
+                2.0F,
+                200
+        )
+                .criterion("has_unrefined_crynia", conditionsFromItem(VonoImpetBlocks.UNREFINED_CRYNIA))
+                .offerTo(exporter);
+
+        CookingRecipeJsonBuilder.createBlasting(
+                Ingredient.ofItems(VonoImpetBlocks.UNREFINED_CRYNIA),
+                RecipeCategory.MISC,
+                VonoImpetItems.ELUSIVE_REMNANT,
+                2.0F,
+                100
+        )
+                .criterion("has_unrefined_crynia", conditionsFromItem(VonoImpetBlocks.UNREFINED_CRYNIA))
+                .offerTo(exporter, getBlastingItemPath(VonoImpetItems.ELUSIVE_REMNANT));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, VonoImpetItems.CRYNIA_INGOT)
+                .input(VonoImpetItems.ELUSIVE_REMNANT, 4)
+                .input(VonoImpetItems.POTENTIAL_SPARK, 4)
+                .group("crynia_ingot")
+                .criterion("has_elusive_remnant", conditionsFromItem(VonoImpetItems.ELUSIVE_REMNANT))
+                .criterion("has_potential_spark", conditionsFromItem(VonoImpetItems.POTENTIAL_SPARK))
+                .offerTo(exporter);
+
+        offerReversibleCompactingRecipesWithReverseRecipeGroup(
+                exporter,
+                RecipeCategory.MISC,
+                VonoImpetItems.CRYNIA_INGOT,
+                RecipeCategory.BUILDING_BLOCKS,
+                VonoImpetBlocks.CRYNIA_BLOCK,
+                "crynia_ingot_from_crynia_block",
+                "crynia_ingot"
+        );
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, VonoImpetItems.CRYNIA_SWORD)
+                .input('#', Items.STICK)
+                .input('X', VonoImpetItems.CRYNIA_INGOT)
+                .pattern("X")
+                .pattern("X")
+                .pattern("#")
+                .criterion("has_crynia_ingot", conditionsFromItem(VonoImpetItems.CRYNIA_INGOT))
+                .offerTo(exporter);
+        
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, VonoImpetItems.CRYNIA_PICKAXE)
+                .input('#', Items.STICK)
+                .input('X', VonoImpetItems.CRYNIA_INGOT)
+                .pattern("XXX")
+                .pattern(" # ")
+                .pattern(" # ")
+                .criterion("has_crynia_ingot", conditionsFromItem(VonoImpetItems.CRYNIA_INGOT))
+                .offerTo(exporter);
+        
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, VonoImpetItems.CRYNIA_AXE)
+                .input('#', Items.STICK)
+                .input('X', VonoImpetItems.CRYNIA_INGOT)
+                .pattern("XX")
+                .pattern("X#")
+                .pattern(" #")
+                .criterion("has_crynia_ingot", conditionsFromItem(VonoImpetItems.CRYNIA_INGOT))
+                .offerTo(exporter);
+        
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, VonoImpetItems.CRYNIA_SHOVEL)
+                .input('#', Items.STICK)
+                .input('X', VonoImpetItems.CRYNIA_INGOT)
+                .pattern("X")
+                .pattern("#")
+                .pattern("#")
+                .criterion("has_crynia_ingot", conditionsFromItem(VonoImpetItems.CRYNIA_INGOT))
+                .offerTo(exporter);
+        
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, VonoImpetItems.CRYNIA_HOE)
+                .input('#', Items.STICK)
+                .input('X', VonoImpetItems.CRYNIA_INGOT)
+                .pattern("XX")
+                .pattern(" #")
+                .pattern(" #")
+                .criterion("has_crynia_ingot", conditionsFromItem(VonoImpetItems.CRYNIA_INGOT))
+                .offerTo(exporter);
+
     }
 }

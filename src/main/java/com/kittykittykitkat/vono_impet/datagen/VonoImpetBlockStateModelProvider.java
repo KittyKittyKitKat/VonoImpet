@@ -75,6 +75,9 @@ public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
         blockStateModelGenerator.registerAxisRotated(VonoImpetBlocks.HADELITE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
         blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
+        blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.UNREFINED_CRYNIA);
+        blockStateModelGenerator.registerSimpleCubeAll(VonoImpetBlocks.CRYNIA_BLOCK);
     }
 
     @Override
@@ -86,5 +89,16 @@ public class VonoImpetBlockStateModelProvider extends FabricModelProvider {
         itemModelGenerator.register(VonoImpetItems.VARSTER_CHEST_BOAT, Models.GENERATED);
 
         itemModelGenerator.register(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA, Models.TEMPLATE_MUSIC_DISC);
+
+        itemModelGenerator.register(VonoImpetItems.POTENTIAL_SPARK, Models.GENERATED);
+        itemModelGenerator.register(VonoImpetItems.VARSTER_ANVI, Models.GENERATED);
+
+        itemModelGenerator.register(VonoImpetItems.ELUSIVE_REMNANT, Models.GENERATED);
+        itemModelGenerator.register(VonoImpetItems.CRYNIA_INGOT, Models.GENERATED);
+        itemModelGenerator.register(VonoImpetItems.CRYNIA_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(VonoImpetItems.CRYNIA_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(VonoImpetItems.CRYNIA_AXE, Models.HANDHELD);
+        itemModelGenerator.register(VonoImpetItems.CRYNIA_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(VonoImpetItems.CRYNIA_HOE, Models.HANDHELD);
     }
 }

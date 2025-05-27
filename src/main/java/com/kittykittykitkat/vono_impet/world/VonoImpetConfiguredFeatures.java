@@ -47,9 +47,8 @@ public class VonoImpetConfiguredFeatures {
         RegistryEntryLookup<Block> registryEntryLookup = context.getRegistryLookup(RegistryKeys.BLOCK);
 
         RuleTest hadeliteReplacables = new TagMatchRuleTest(VonoImpetBlockTags.HADELITE_ORE_REPLACEABLES);
-        // TODO: Replace with Unrefined Crynia
         List<OreFeatureConfig.Target> unrefinedCryniaDeposit = List.of(
-                OreFeatureConfig.createTarget(hadeliteReplacables, VonoImpetBlocks.MIRAKELL_PLANKS.getDefaultState())
+                OreFeatureConfig.createTarget(hadeliteReplacables, VonoImpetBlocks.UNREFINED_CRYNIA.getDefaultState())
         );
         register(context, UNREFINED_CRYNIA_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(unrefinedCryniaDeposit, 3, 1.0F));
 

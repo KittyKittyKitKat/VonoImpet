@@ -42,6 +42,7 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetItems.MIRAKELL_BOAT);
                         entries.add(VonoImpetItems.MIRAKELL_CHEST_BOAT);
                         entries.add(VonoImpetBlocks.MIRAKELL_LEAVES);
+                        entries.add(VonoImpetItems.POTENTIAL_SPARK);
                         entries.add(VonoImpetBlocks.MIRAKELL_SAPLING);
                         entries.add(VonoImpetBlocks.MIRAKELL_VINE);
                         entries.add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES);
@@ -64,6 +65,7 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetItems.VARSTER_BOAT);
                         entries.add(VonoImpetItems.VARSTER_CHEST_BOAT);
                         entries.add(VonoImpetBlocks.VARSTER_LEAVES);
+                        entries.add(VonoImpetItems.VARSTER_ANVI);
                         entries.add(VonoImpetBlocks.VARSTER_SAPLING);
 
                         entries.add(VonoImpetBlocks.HADELITE);
@@ -89,6 +91,17 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
                         entries.add(VonoImpetBlocks.HADELITE_PILLAR);
                         entries.add(VonoImpetBlocks.HADELITE_CORNER_PILLAR);
+
+                        entries.add(VonoImpetBlocks.UNREFINED_CRYNIA);
+                        entries.add(VonoImpetBlocks.CRYNIA_BLOCK);
+                        entries.add(VonoImpetItems.ELUSIVE_REMNANT);
+                        entries.add(VonoImpetItems.CRYNIA_INGOT);
+
+                        entries.add(VonoImpetItems.CRYNIA_SWORD);
+                        entries.add(VonoImpetItems.CRYNIA_PICKAXE);
+                        entries.add(VonoImpetItems.CRYNIA_AXE);
+                        entries.add(VonoImpetItems.CRYNIA_SHOVEL);
+                        entries.add(VonoImpetItems.CRYNIA_HOE);
 
                         entries.add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
                     }))

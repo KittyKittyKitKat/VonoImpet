@@ -181,6 +181,45 @@
 
   },
 
+  "ambient.broken_hills.loop": {
+
+  },
+  "ambient.broken_hills.mood": {
+
+  },
+  "ambient.broken_hills.additions": {
+    "sounds": [
+      {
+        "name": "vono_impet:ambient/broken_hills/tarnet1",
+        "volume": 0.35,
+        "weight": 1
+      },
+      {
+        "name": "vono_impet:ambient/broken_hills/tarnet2",
+        "volume": 0.35,
+        "weight": 1
+      },
+      {
+        "name": "vono_impet:ambient/broken_hills/wind1",
+        "volume": 0.35,
+        "weight": 1
+      },
+      {
+        "name": "vono_impet:ambient/broken_hills/wind2",
+        "volume": 0.35,
+        "weight": 1
+      },
+      {
+        "name": "vono_impet:ambient/broken_hills/wind3",
+        "volume": 0.35,
+        "weight": 1
+      }
+    ]
+  },
+  "music.vono.broken_hills": {
+
+  },
+
   "ambient.desiccated_plains.loop": {
     "sounds": [
       {

@@ -4,6 +4,7 @@ import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
 import com.kittykittykitkat.vono_impet.tag.VonoImpetItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -105,5 +106,29 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
 
         getOrCreateTagBuilder(VonoImpetItemTags.WRETCHED_DROP_MUSIC_DISCS)
                 .add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
+
+        getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
+                .add(VonoImpetItems.CRYNIA_INGOT);
+
+        getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
+                .add(VonoImpetItems.CRYNIA_INGOT);
+
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(VonoImpetItems.CRYNIA_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(VonoImpetItems.CRYNIA_PICKAXE);
+
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(VonoImpetItems.CRYNIA_AXE);
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(VonoImpetItems.CRYNIA_SHOVEL);
+
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(VonoImpetItems.CRYNIA_HOE);
+
+        getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES)
+                .add(VonoImpetItems.CRYNIA_PICKAXE);
     }
 }

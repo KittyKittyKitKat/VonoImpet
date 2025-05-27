@@ -56,6 +56,7 @@ public class VonoImpetBlocks {
             )
     );
 
+    // TODO: Update bushy leaves texture
     public static final Block MIRAKELL_LEAVES = registerBlock(
             "mirakell_leaves",
             new MirakellLeavesBlock(
@@ -250,6 +251,7 @@ public class VonoImpetBlocks {
             )
     );
 
+    // TODO: Bushy leaves model and texture
     public static final Block VARSTER_LEAVES = registerBlock(
             "varster_leaves",
             new LeavesBlock(
@@ -557,6 +559,24 @@ public class VonoImpetBlocks {
             "hadelite_corner_pillar",
             new Block(
                     FabricBlockSettings.copyOf(Blocks.CHISELED_DEEPSLATE)
+            )
+    );
+
+    // </editor-fold>
+
+    // CRYNIA
+    // <editor-fold>
+    public static final Block UNREFINED_CRYNIA = registerBlock(
+            "unrefined_crynia",
+            new Block(
+                    FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)
+            )
+    );
+
+    public static final Block CRYNIA_BLOCK = registerBlock(
+            "crynia_block",
+            new Block(
+                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)
             )
     );
 

@@ -5,10 +5,7 @@ import com.kittykittykitkat.vono_impet.entity.VonoImpetBoats;
 import com.kittykittykitkat.vono_impet.sound.VonoImpetSoundsEvents;
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.HangingSignItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.MusicDiscItem;
-import net.minecraft.item.SignItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvents;
@@ -84,6 +81,88 @@ public class VonoImpetItems {
                     VonoImpetSoundsEvents.MUSIC_DISC_PASET_E_IMPETIF_LENA,
                     new FabricItemSettings().maxCount(1).rarity(Rarity.RARE),
                     251
+            )
+    );
+
+    // TODO: Make edible
+    public static final Item VARSTER_ANVI = registerItem(
+            "varster_anvi",
+            new Item(
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item POTENTIAL_SPARK = registerItem(
+            "potential_spark",
+            new Item(
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item ELUSIVE_REMNANT = registerItem(
+            "elusive_remnant",
+            new Item(
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item CRYNIA_INGOT = registerItem(
+            "crynia_ingot",
+            new Item(
+                    new FabricItemSettings()
+            )
+    );
+
+    // TODO: Make fireproof?
+    // TODO: Replace default netherite values with custom ones
+    // TODO: Longsword and Multibow
+    public static final Item CRYNIA_SWORD = registerItem(
+            "crynia_sword",
+            new SwordItem(
+                    CryniaToolMaterial.INSTANCE,
+                    3,
+                    -2.4F,
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item CRYNIA_PICKAXE = registerItem(
+            "crynia_pickaxe",
+            new PickaxeItem(
+                    CryniaToolMaterial.INSTANCE,
+                    1,
+                    -2.8F,
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item CRYNIA_AXE = registerItem(
+            "crynia_axe",
+            new AxeItem(
+                    CryniaToolMaterial.INSTANCE,
+                    5,
+                    -3.0F,
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item CRYNIA_SHOVEL = registerItem(
+            "crynia_shovel",
+            new ShovelItem(
+                    CryniaToolMaterial.INSTANCE,
+                    1.5F,
+                    -3.0F,
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item CRYNIA_HOE = registerItem(
+            "crynia_hoe",
+            new HoeItem(
+                    CryniaToolMaterial.INSTANCE,
+                    -4,
+                    0.0F,
+                    new FabricItemSettings()
             )
     );
 
