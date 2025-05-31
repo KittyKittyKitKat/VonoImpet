@@ -1,7 +1,20 @@
 {
   "variants": {
-    "": {
-      "model": "vono_impet:block/hadelite"
-    }
+    "": [
+      {
+        "model": "vono_impet:block/hadelite"
+      },
+      {
+        "model": "vono_impet:block/hadelite_mirrored"
+      },
+      {
+        "model": "vono_impet:block/hadelite",
+        "y": 180
+      },
+      {
+        "model": "vono_impet:block/hadelite_mirrored",
+        "y": 180
+      }
+    ]
   }
 }

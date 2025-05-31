@@ -20,6 +20,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.BiasedToBottomIntProvider;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
@@ -27,6 +28,7 @@ import net.minecraft.world.gen.root.AboveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
 import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AttachedToLeavesTreeDecorator;
@@ -42,6 +44,8 @@ public class VonoImpetConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MIRAKELL_TREE_KEY = registerKey("mirakell_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> VARSTER_TREE_KEY = registerKey("varster_tree");
+
+    public static final RegistryKey<ConfiguredFeature<?,?>> HADELITE_DEPOSIT_KEY = registerKey("hadelite_deposit");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<Block> registryEntryLookup = context.getRegistryLookup(RegistryKeys.BLOCK);
@@ -134,6 +138,13 @@ public class VonoImpetConfiguredFeatures {
                 .dirtProvider(BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG))
                 .ignoreVines()
                 .build());
+
+        register(context, HADELITE_DEPOSIT_KEY, Feature.DISK, new DiskFeatureConfig(
+                PredicatedStateProvider.of(VonoImpetBlocks.HADELITE),
+                BlockPredicate.matchingBlocks(List.of(Blocks.SOUL_SOIL, Blocks.SOUL_SAND)),
+                UniformIntProvider.create(2, 3),
+                1
+        ));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
