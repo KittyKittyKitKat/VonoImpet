@@ -27,10 +27,47 @@ public class VonoImpetClient implements ClientModInitializer {
                 VonoImpetBlocks.VARSTER_DOOR,
                 VonoImpetBlocks.VARSTER_TRAPDOOR,
                 VonoImpetBlocks.VARSTER_SAPLING,
-                VonoImpetBlocks.POTTED_VARSTER_SAPLING
+                VonoImpetBlocks.POTTED_VARSTER_SAPLING,
+                VonoImpetBlocks.CRYNIA_BARS,
+                VonoImpetBlocks.CRYNIA_DOOR,
+                VonoImpetBlocks.CRYNIA_TRAPDOOR,
+                VonoImpetBlocks.KAYO,
+                VonoImpetBlocks.POTTED_KAYO
         );
 
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent()
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
+                VonoImpetBlocks.BLACK_SAIGA,
+                VonoImpetBlocks.BLUE_SAIGA,
+                VonoImpetBlocks.BROWN_SAIGA,
+                VonoImpetBlocks.CYAN_SAIGA,
+                VonoImpetBlocks.GRAY_SAIGA,
+                VonoImpetBlocks.GREEN_SAIGA,
+                VonoImpetBlocks.LIGHT_BLUE_SAIGA,
+                VonoImpetBlocks.LIGHT_GRAY_SAIGA,
+                VonoImpetBlocks.LIME_SAIGA,
+                VonoImpetBlocks.MAGENTA_SAIGA,
+                VonoImpetBlocks.ORANGE_SAIGA,
+                VonoImpetBlocks.PINK_SAIGA,
+                VonoImpetBlocks.PURPLE_SAIGA,
+                VonoImpetBlocks.RED_SAIGA,
+                VonoImpetBlocks.WHITE_SAIGA,
+                VonoImpetBlocks.YELLOW_SAIGA,
+                VonoImpetBlocks.BLACK_SAIGA_PANE,
+                VonoImpetBlocks.BLUE_SAIGA_PANE,
+                VonoImpetBlocks.BROWN_SAIGA_PANE,
+                VonoImpetBlocks.CYAN_SAIGA_PANE,
+                VonoImpetBlocks.GRAY_SAIGA_PANE,
+                VonoImpetBlocks.GREEN_SAIGA_PANE,
+                VonoImpetBlocks.LIGHT_BLUE_SAIGA_PANE,
+                VonoImpetBlocks.LIGHT_GRAY_SAIGA_PANE,
+                VonoImpetBlocks.LIME_SAIGA_PANE,
+                VonoImpetBlocks.MAGENTA_SAIGA_PANE,
+                VonoImpetBlocks.ORANGE_SAIGA_PANE,
+                VonoImpetBlocks.PINK_SAIGA_PANE,
+                VonoImpetBlocks.PURPLE_SAIGA_PANE,
+                VonoImpetBlocks.RED_SAIGA_PANE,
+                VonoImpetBlocks.WHITE_SAIGA_PANE,
+                VonoImpetBlocks.YELLOW_SAIGA_PANE
         );
 
         TerraformBoatClientHelper.registerModelLayers(VonoImpetBoats.MIRAKELL_BOAT_ID, false);

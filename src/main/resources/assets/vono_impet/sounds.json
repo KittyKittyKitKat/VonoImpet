@@ -491,5 +491,13 @@
           "stream": true
         }
       ]
-    }
+    },
+  "music_disc.0": {
+    "sounds": [
+      {
+        "name": "vono_impet:records/0",
+        "stream": true
+      }
+    ]
+  }
 }

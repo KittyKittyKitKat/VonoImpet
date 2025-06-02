@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "vono_impet:block/chiseled_hadelite_bricks_lit"
+  }
+}

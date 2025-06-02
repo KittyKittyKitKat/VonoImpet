@@ -4,6 +4,7 @@ import com.kittykittykitkat.vono_impet.block.VonoImpetBlocks;
 import com.kittykittykitkat.vono_impet.tag.VonoImpetBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -165,7 +166,8 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
 
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
             .add(VonoImpetBlocks.POTTED_MIRAKELL_SAPLING)
-            .add(VonoImpetBlocks.POTTED_VARSTER_SAPLING);
+            .add(VonoImpetBlocks.POTTED_VARSTER_SAPLING)
+            .add(VonoImpetBlocks.POTTED_KAYO);
 
         getOrCreateTagBuilder(BlockTags.LAVA_POOL_STONE_CANNOT_REPLACE)
                 .add(VonoImpetBlocks.MIRAKELL_LOG)
@@ -277,17 +279,66 @@ public class VonoImpetBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(VonoImpetBlocks.HADELITE_PILLAR)
                 .add(VonoImpetBlocks.HADELITE_CORNER_PILLAR)
                 .add(VonoImpetBlocks.UNREFINED_CRYNIA)
-                .add(VonoImpetBlocks.CRYNIA_BLOCK);
+                .add(VonoImpetBlocks.CRYNIA_BLOCK)
+                .add(VonoImpetBlocks.CRYNIA_BARS)
+                .add(VonoImpetBlocks.CRYNIA_DOOR)
+                .add(VonoImpetBlocks.CRYNIA_TRAPDOOR)
+                .add(VonoImpetBlocks.BLACK_SAIGA)
+                .add(VonoImpetBlocks.BLUE_SAIGA)
+                .add(VonoImpetBlocks.BROWN_SAIGA)
+                .add(VonoImpetBlocks.CYAN_SAIGA)
+                .add(VonoImpetBlocks.GRAY_SAIGA)
+                .add(VonoImpetBlocks.GREEN_SAIGA)
+                .add(VonoImpetBlocks.LIGHT_BLUE_SAIGA)
+                .add(VonoImpetBlocks.LIGHT_GRAY_SAIGA)
+                .add(VonoImpetBlocks.LIME_SAIGA)
+                .add(VonoImpetBlocks.MAGENTA_SAIGA)
+                .add(VonoImpetBlocks.ORANGE_SAIGA)
+                .add(VonoImpetBlocks.PINK_SAIGA)
+                .add(VonoImpetBlocks.PURPLE_SAIGA)
+                .add(VonoImpetBlocks.RED_SAIGA)
+                .add(VonoImpetBlocks.WHITE_SAIGA)
+                .add(VonoImpetBlocks.YELLOW_SAIGA);
 
         getOrCreateTagBuilder(VonoImpetBlockTags.HADELITE_ORE_REPLACEABLES)
                 .add(VonoImpetBlocks.HADELITE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(VonoImpetBlocks.UNREFINED_CRYNIA)
-                .add(VonoImpetBlocks.CRYNIA_BLOCK);
+                .add(VonoImpetBlocks.CRYNIA_BLOCK)
+                .add(VonoImpetBlocks.CRYNIA_BARS)
+                .add(VonoImpetBlocks.CRYNIA_DOOR)
+                .add(VonoImpetBlocks.CRYNIA_TRAPDOOR);
 
         getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(VonoImpetBlocks.CRYNIA_BLOCK);
+
+        getOrCreateTagBuilder(BlockTags.IMPERMEABLE)
+                .add(VonoImpetBlocks.BLACK_SAIGA)
+                .add(VonoImpetBlocks.BLUE_SAIGA)
+                .add(VonoImpetBlocks.BROWN_SAIGA)
+                .add(VonoImpetBlocks.CYAN_SAIGA)
+                .add(VonoImpetBlocks.GRAY_SAIGA)
+                .add(VonoImpetBlocks.GREEN_SAIGA)
+                .add(VonoImpetBlocks.LIGHT_BLUE_SAIGA)
+                .add(VonoImpetBlocks.LIGHT_GRAY_SAIGA)
+                .add(VonoImpetBlocks.LIME_SAIGA)
+                .add(VonoImpetBlocks.MAGENTA_SAIGA)
+                .add(VonoImpetBlocks.ORANGE_SAIGA)
+                .add(VonoImpetBlocks.PINK_SAIGA)
+                .add(VonoImpetBlocks.PURPLE_SAIGA)
+                .add(VonoImpetBlocks.RED_SAIGA)
+                .add(VonoImpetBlocks.WHITE_SAIGA)
+                .add(VonoImpetBlocks.YELLOW_SAIGA);
+
+        getOrCreateTagBuilder(BlockTags.DOORS)
+                .add(VonoImpetBlocks.CRYNIA_DOOR);
+
+        getOrCreateTagBuilder(BlockTags.TRAPDOORS)
+                .add(VonoImpetBlocks.CRYNIA_TRAPDOOR);
+
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .add(VonoImpetBlocks.KAYO);
 
     }
 }

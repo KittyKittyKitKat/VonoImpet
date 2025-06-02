@@ -43,6 +43,7 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetItems.MIRAKELL_CHEST_BOAT);
                         entries.add(VonoImpetBlocks.MIRAKELL_LEAVES);
                         entries.add(VonoImpetItems.POTENTIAL_SPARK);
+                        entries.add(VonoImpetItems.MIRAKELL_SPARK);
                         entries.add(VonoImpetBlocks.MIRAKELL_SAPLING);
                         entries.add(VonoImpetBlocks.MIRAKELL_VINE);
                         entries.add(VonoImpetBlocks.MIRAKELL_BUSHY_VINES);
@@ -69,23 +70,23 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetBlocks.VARSTER_SAPLING);
 
                         entries.add(VonoImpetBlocks.HADELITE);
-                        entries.add(VonoImpetBlocks.HADELITE_SLAB);
                         entries.add(VonoImpetBlocks.HADELITE_STAIRS);
+                        entries.add(VonoImpetBlocks.HADELITE_SLAB);
                         entries.add(VonoImpetBlocks.HADELITE_WALL);
                         entries.add(VonoImpetBlocks.HADELITE_BUTTON);
                         entries.add(VonoImpetBlocks.HADELITE_PRESSURE_PLATE);
                         entries.add(VonoImpetBlocks.POLISHED_HADELITE);
-                        entries.add(VonoImpetBlocks.POLISHED_HADELITE_SLAB);
                         entries.add(VonoImpetBlocks.POLISHED_HADELITE_STAIRS);
+                        entries.add(VonoImpetBlocks.POLISHED_HADELITE_SLAB);
                         entries.add(VonoImpetBlocks.POLISHED_HADELITE_WALL);
                         entries.add(VonoImpetBlocks.HADELITE_TILES);
-                        entries.add(VonoImpetBlocks.HADELITE_TILE_SLAB);
                         entries.add(VonoImpetBlocks.HADELITE_TILE_STAIRS);
+                        entries.add(VonoImpetBlocks.HADELITE_TILE_SLAB);
                         entries.add(VonoImpetBlocks.HADELITE_TILE_WALL);
                         entries.add(VonoImpetBlocks.CRACKED_HADELITE_TILES);
                         entries.add(VonoImpetBlocks.HADELITE_BRICKS);
-                        entries.add(VonoImpetBlocks.HADELITE_BRICK_SLAB);
                         entries.add(VonoImpetBlocks.HADELITE_BRICK_STAIRS);
+                        entries.add(VonoImpetBlocks.HADELITE_BRICK_SLAB);
                         entries.add(VonoImpetBlocks.HADELITE_BRICK_WALL);
                         entries.add(VonoImpetBlocks.CRACKED_HADELITE_BRICKS);
                         entries.add(VonoImpetBlocks.CHISELED_HADELITE_BRICKS);
@@ -95,7 +96,11 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetBlocks.UNREFINED_CRYNIA);
                         entries.add(VonoImpetBlocks.CRYNIA_BLOCK);
                         entries.add(VonoImpetItems.ELUSIVE_REMNANT);
+                        entries.add(VonoImpetItems.CRYNIA_NUGGET);
                         entries.add(VonoImpetItems.CRYNIA_INGOT);
+                        entries.add(VonoImpetBlocks.CRYNIA_DOOR);
+                        entries.add(VonoImpetBlocks.CRYNIA_TRAPDOOR);
+                        entries.add(VonoImpetBlocks.CRYNIA_BARS);
 
                         entries.add(VonoImpetItems.CRYNIA_SWORD);
                         entries.add(VonoImpetItems.CRYNIA_PICKAXE);
@@ -103,7 +108,44 @@ public class VonoImpetItemGroups {
                         entries.add(VonoImpetItems.CRYNIA_SHOVEL);
                         entries.add(VonoImpetItems.CRYNIA_HOE);
 
+                        entries.add(VonoImpetBlocks.WHITE_SAIGA);
+                        entries.add(VonoImpetBlocks.LIGHT_GRAY_SAIGA);
+                        entries.add(VonoImpetBlocks.GRAY_SAIGA);
+                        entries.add(VonoImpetBlocks.BLACK_SAIGA);
+                        entries.add(VonoImpetBlocks.BROWN_SAIGA);
+                        entries.add(VonoImpetBlocks.RED_SAIGA);
+                        entries.add(VonoImpetBlocks.ORANGE_SAIGA);
+                        entries.add(VonoImpetBlocks.YELLOW_SAIGA);
+                        entries.add(VonoImpetBlocks.LIME_SAIGA);
+                        entries.add(VonoImpetBlocks.GREEN_SAIGA);
+                        entries.add(VonoImpetBlocks.CYAN_SAIGA);
+                        entries.add(VonoImpetBlocks.LIGHT_BLUE_SAIGA);
+                        entries.add(VonoImpetBlocks.BLUE_SAIGA);
+                        entries.add(VonoImpetBlocks.PURPLE_SAIGA);
+                        entries.add(VonoImpetBlocks.MAGENTA_SAIGA);
+                        entries.add(VonoImpetBlocks.PINK_SAIGA);
+                        entries.add(VonoImpetBlocks.WHITE_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.LIGHT_GRAY_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.GRAY_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.BLACK_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.BROWN_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.RED_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.ORANGE_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.YELLOW_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.LIME_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.GREEN_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.CYAN_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.LIGHT_BLUE_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.BLUE_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.PURPLE_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.MAGENTA_SAIGA_PANE);
+                        entries.add(VonoImpetBlocks.PINK_SAIGA_PANE);
+
+                        entries.add(VonoImpetBlocks.KAYO);
+                        entries.add(VonoImpetItems.PEACH);
+
                         entries.add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
+                        entries.add(VonoImpetItems.MUSIC_DISC_ZERO);
                     }))
                     .build()
     );

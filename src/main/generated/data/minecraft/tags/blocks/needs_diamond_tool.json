@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "vono_impet:unrefined_crynia",
-    "vono_impet:crynia_block"
+    "vono_impet:crynia_block",
+    "vono_impet:crynia_bars",
+    "vono_impet:crynia_door",
+    "vono_impet:crynia_trapdoor"
   ]
 }
