@@ -182,9 +182,29 @@
   },
 
   "ambient.broken_hills.loop": {
-
+	"sounds": [
+      {
+        "name": "vono_impet:ambient/broken_hills/ambience",
+        "stream": true,
+        "volume": 0.5
+      }
+    ]
   },
   "ambient.broken_hills.mood": {
+	"sounds": [
+      {
+        "name": "vono_impet:ambient/broken_hills/mood1"
+      },
+      {
+        "name": "vono_impet:ambient/broken_hills/mood2"
+      },
+      {
+        "name": "vono_impet:ambient/broken_hills/mood3"
+      },
+      {
+        "name": "vono_impet:ambient/broken_hills/mood4"
+      }
+    ]
 
   },
   "ambient.broken_hills.additions": {
@@ -192,25 +212,45 @@
       {
         "name": "vono_impet:ambient/broken_hills/tarnet1",
         "volume": 0.35,
-        "weight": 1
+        "weight": 4
       },
       {
         "name": "vono_impet:ambient/broken_hills/tarnet2",
         "volume": 0.35,
-        "weight": 1
+        "weight": 4
       },
       {
         "name": "vono_impet:ambient/broken_hills/wind1",
         "volume": 0.35,
-        "weight": 1
+        "weight": 2
       },
       {
         "name": "vono_impet:ambient/broken_hills/wind2",
         "volume": 0.35,
-        "weight": 1
+        "weight": 3
       },
       {
         "name": "vono_impet:ambient/broken_hills/wind3",
+        "volume": 0.35,
+        "weight": 3
+      },
+	  {
+        "name": "vono_impet:ambient/broken_hills/ascrave1",
+        "volume": 0.3,
+        "weight": 1
+      },
+	  {
+        "name": "vono_impet:ambient/broken_hills/ascrave2",
+        "volume": 0.3,
+        "weight": 1
+      },
+	  {
+        "name": "vono_impet:ambient/broken_hills/jayvu1",
+        "volume": 0.35,
+        "weight": 1
+      },
+	  {
+        "name": "vono_impet:ambient/broken_hills/jayvu2",
         "volume": 0.35,
         "weight": 1
       }
