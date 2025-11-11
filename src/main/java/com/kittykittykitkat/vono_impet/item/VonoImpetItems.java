@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
@@ -84,9 +83,26 @@ public class VonoImpetItems {
             )
     );
 
+    public static final Item MUSIC_DISC_ZERO = registerItem(
+            "music_disc_0",
+            new MusicDiscItem(
+                    0,
+                    VonoImpetSoundsEvents.MUSIC_DISC_ZERO,
+                    new FabricItemSettings().maxCount(1).rarity(Rarity.RARE),
+                    100
+            )
+    );
+
     // TODO: Make edible
     public static final Item VARSTER_ANVI = registerItem(
             "varster_anvi",
+            new Item(
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item PEACH = registerItem(
+            "peach",
             new Item(
                     new FabricItemSettings()
             )
@@ -99,8 +115,22 @@ public class VonoImpetItems {
             )
     );
 
+    public static final Item MIRAKELL_SPARK = registerItem(
+            "mirakell_spark",
+            new Item(
+                    new FabricItemSettings()
+            )
+    );
+
     public static final Item ELUSIVE_REMNANT = registerItem(
             "elusive_remnant",
+            new Item(
+                    new FabricItemSettings()
+            )
+    );
+
+    public static final Item CRYNIA_NUGGET = registerItem(
+            "crynia_nugget",
             new Item(
                     new FabricItemSettings()
             )

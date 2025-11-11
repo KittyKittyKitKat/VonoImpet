@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "vono_impet:black_saiga",
+    "vono_impet:blue_saiga",
+    "vono_impet:brown_saiga",
+    "vono_impet:cyan_saiga",
+    "vono_impet:gray_saiga",
+    "vono_impet:green_saiga",
+    "vono_impet:light_blue_saiga",
+    "vono_impet:light_gray_saiga",
+    "vono_impet:lime_saiga",
+    "vono_impet:magenta_saiga",
+    "vono_impet:orange_saiga",
+    "vono_impet:pink_saiga",
+    "vono_impet:purple_saiga",
+    "vono_impet:red_saiga",
+    "vono_impet:white_saiga",
+    "vono_impet:yellow_saiga"
+  ]
+}

@@ -7,6 +7,7 @@ import com.kittykittykitkat.vono_impet.item.VonoImpetItemGroups;
 import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
 import com.kittykittykitkat.vono_impet.particle.VonoImpetParticles;
 import com.kittykittykitkat.vono_impet.sound.VonoImpetSoundsEvents;
+import com.kittykittykitkat.vono_impet.world.VonoImpetPlacedFeatures;
 import com.kittykittykitkat.vono_impet.world.gen.VonoImpetWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,7 +17,9 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,11 +46,19 @@ public class VonoImpet implements ModInitializer {
 		VonoImpetItems.registerItems();
 		VonoImpetBoats.registerBoats();
 		VonoImpetWorldGeneration.generateWorldGen();
+		VonoImpetPlacedFeatures.registerBiomeModifications();
 
 		registerCompostables();
 		registerFuels();
 		registerStrippables();
 		registerFlammables();
+
+		CustomPortalBuilder.beginPortal()
+				.frameBlock(VonoImpetBlocks.CHISELED_HADELITE_BRICKS)
+				.lightWithWater()
+				.destDimID(new Identifier(MOD_ID, "vono"))
+				.tintColor(0, 0, 0)
+				.registerPortal();
 
 		if (FabricLoader.getInstance().isModLoaded("dramaticdoors")) {
 			VonoImpetDramaticDoors.registerDramaticDoors();

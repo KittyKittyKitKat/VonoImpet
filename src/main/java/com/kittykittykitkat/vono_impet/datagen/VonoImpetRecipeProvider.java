@@ -5,7 +5,6 @@ import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
 import com.kittykittykitkat.vono_impet.tag.VonoImpetItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -222,10 +221,10 @@ public class VonoImpetRecipeProvider extends FabricRecipeProvider {
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, VonoImpetItems.CRYNIA_INGOT)
                 .input(VonoImpetItems.ELUSIVE_REMNANT, 4)
-                .input(VonoImpetItems.POTENTIAL_SPARK, 4)
+                .input(VonoImpetItems.MIRAKELL_SPARK, 4)
                 .group("crynia_ingot")
                 .criterion("has_elusive_remnant", conditionsFromItem(VonoImpetItems.ELUSIVE_REMNANT))
-                .criterion("has_potential_spark", conditionsFromItem(VonoImpetItems.POTENTIAL_SPARK))
+                .criterion("has_potential_spark", conditionsFromItem(VonoImpetItems.MIRAKELL_SPARK))
                 .offerTo(exporter);
 
         offerReversibleCompactingRecipesWithReverseRecipeGroup(

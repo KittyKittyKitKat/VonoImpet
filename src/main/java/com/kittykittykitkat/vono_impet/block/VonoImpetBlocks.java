@@ -13,9 +13,15 @@ import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.minecraft.block.*;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 import static com.kittykittykitkat.vono_impet.VonoImpet.MOD_ID;
@@ -543,8 +549,9 @@ public class VonoImpetBlocks {
 
     public static final Block CHISELED_HADELITE_BRICKS = registerBlock(
             "chiseled_hadelite_bricks",
-            new Block(
+            new ChiseledHadeliteBlock(
                     FabricBlockSettings.copyOf(Blocks.CRACKED_DEEPSLATE_BRICKS)
+                            .luminance(blockState -> blockState.get(Properties.LIT) ? 8 : 0)
             )
     );
 
@@ -566,6 +573,10 @@ public class VonoImpetBlocks {
 
     // CRYNIA
     // <editor-fold>
+    public static final BlockSetType CRYNIA_SET_TYPE = BlockSetTypeBuilder.copyOf(BlockSetType.IRON)
+            .soundGroup(BlockSoundGroup.NETHERITE)
+            .build(new Identifier(MOD_ID, "crynia"));
+
     public static final Block UNREFINED_CRYNIA = registerBlock(
             "unrefined_crynia",
             new Block(
@@ -580,7 +591,316 @@ public class VonoImpetBlocks {
             )
     );
 
+    public static final Block CRYNIA_BARS = registerBlock(
+            "crynia_bars",
+            new CryniaBarsBlock(
+                    FabricBlockSettings.copyOf(Blocks.IRON_BARS)
+            )
+    );
+
+    public static final Block CRYNIA_DOOR = registerBlock(
+            "crynia_door",
+            new DoorBlock(
+                    FabricBlockSettings.copyOf(Blocks.IRON_DOOR),
+                    CRYNIA_SET_TYPE
+            )
+    );
+
+    public static final Block CRYNIA_TRAPDOOR = registerBlock(
+            "crynia_trapdoor",
+            new TrapdoorBlock(
+                    FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR),
+                    CRYNIA_SET_TYPE
+            )
+    );
+
     // </editor-fold>
+
+    // SAIGA
+    // <editor-fold>
+    public static final Block BLACK_SAIGA = registerBlock(
+            "black_saiga",
+            new SaigaBlock(
+                    DyeColor.BLACK,
+                    FabricBlockSettings.copyOf(Blocks.BLACK_STAINED_GLASS)
+            )
+    );
+
+    public static final Block BLUE_SAIGA = registerBlock(
+            "blue_saiga",
+            new SaigaBlock(
+                    DyeColor.BLUE,
+                    FabricBlockSettings.copyOf(Blocks.BLUE_STAINED_GLASS)
+            )
+    );
+
+    public static final Block BROWN_SAIGA = registerBlock(
+            "brown_saiga",
+            new SaigaBlock(
+                    DyeColor.BROWN,
+                    FabricBlockSettings.copyOf(Blocks.BROWN_STAINED_GLASS)
+            )
+    );
+
+    public static final Block CYAN_SAIGA = registerBlock(
+            "cyan_saiga",
+            new SaigaBlock(
+                    DyeColor.CYAN,
+                    FabricBlockSettings.copyOf(Blocks.CYAN_STAINED_GLASS)
+            )
+    );
+
+    public static final Block GRAY_SAIGA = registerBlock(
+            "gray_saiga",
+            new SaigaBlock(
+                    DyeColor.GRAY,
+                    FabricBlockSettings.copyOf(Blocks.GRAY_STAINED_GLASS)
+            )
+    );
+
+    public static final Block GREEN_SAIGA = registerBlock(
+            "green_saiga",
+            new SaigaBlock(
+                    DyeColor.GREEN,
+                    FabricBlockSettings.copyOf(Blocks.GREEN_STAINED_GLASS)
+            )
+    );
+
+    public static final Block LIGHT_BLUE_SAIGA = registerBlock(
+            "light_blue_saiga",
+            new SaigaBlock(
+                    DyeColor.LIGHT_BLUE,
+                    FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_STAINED_GLASS)
+            )
+    );
+
+    public static final Block LIGHT_GRAY_SAIGA = registerBlock(
+            "light_gray_saiga",
+            new SaigaBlock(
+                    DyeColor.LIGHT_GRAY,
+                    FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_STAINED_GLASS)
+            )
+    );
+
+    public static final Block LIME_SAIGA = registerBlock(
+            "lime_saiga",
+            new SaigaBlock(
+                    DyeColor.LIME,
+                    FabricBlockSettings.copyOf(Blocks.LIME_STAINED_GLASS)
+            )
+    );
+
+    public static final Block MAGENTA_SAIGA = registerBlock(
+            "magenta_saiga",
+            new SaigaBlock(
+                    DyeColor.MAGENTA,
+                    FabricBlockSettings.copyOf(Blocks.MAGENTA_STAINED_GLASS)
+            )
+    );
+
+    public static final Block ORANGE_SAIGA = registerBlock(
+            "orange_saiga",
+            new SaigaBlock(
+                    DyeColor.ORANGE,
+                    FabricBlockSettings.copyOf(Blocks.ORANGE_STAINED_GLASS)
+            )
+    );
+
+    public static final Block PINK_SAIGA = registerBlock(
+            "pink_saiga",
+            new SaigaBlock(
+                    DyeColor.PINK,
+                    FabricBlockSettings.copyOf(Blocks.PINK_STAINED_GLASS)
+            )
+    );
+
+    public static final Block PURPLE_SAIGA = registerBlock(
+            "purple_saiga",
+            new SaigaBlock(
+                    DyeColor.PURPLE,
+                    FabricBlockSettings.copyOf(Blocks.PURPLE_STAINED_GLASS)
+            )
+    );
+
+
+    public static final Block RED_SAIGA = registerBlock(
+            "red_saiga",
+            new SaigaBlock(
+                    DyeColor.RED,
+                    FabricBlockSettings.copyOf(Blocks.RED_STAINED_GLASS)
+            )
+    );
+
+    public static final Block WHITE_SAIGA = registerBlock(
+            "white_saiga",
+            new SaigaBlock(
+                    DyeColor.WHITE,
+                    FabricBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)
+            )
+    );
+
+    public static final Block YELLOW_SAIGA = registerBlock(
+            "yellow_saiga",
+            new SaigaBlock(
+                    DyeColor.YELLOW,
+                    FabricBlockSettings.copyOf(Blocks.YELLOW_STAINED_GLASS)
+            )
+    );
+
+    public static final Block BLACK_SAIGA_PANE = registerBlock(
+            "black_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.BLACK,
+                    FabricBlockSettings.copyOf(Blocks.BLACK_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block BLUE_SAIGA_PANE = registerBlock(
+            "blue_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.BLUE,
+                    FabricBlockSettings.copyOf(Blocks.BLUE_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block BROWN_SAIGA_PANE = registerBlock(
+            "brown_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.BROWN,
+                    FabricBlockSettings.copyOf(Blocks.BROWN_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block CYAN_SAIGA_PANE = registerBlock(
+            "cyan_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.CYAN,
+                    FabricBlockSettings.copyOf(Blocks.CYAN_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block GRAY_SAIGA_PANE = registerBlock(
+            "gray_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.GRAY,
+                    FabricBlockSettings.copyOf(Blocks.GRAY_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block GREEN_SAIGA_PANE = registerBlock(
+            "green_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.GREEN,
+                    FabricBlockSettings.copyOf(Blocks.GREEN_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block LIGHT_BLUE_SAIGA_PANE = registerBlock(
+            "light_blue_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.LIGHT_BLUE,
+                    FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block LIGHT_GRAY_SAIGA_PANE = registerBlock(
+            "light_gray_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.LIGHT_GRAY,
+                    FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block LIME_SAIGA_PANE = registerBlock(
+            "lime_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.LIME,
+                    FabricBlockSettings.copyOf(Blocks.LIME_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block MAGENTA_SAIGA_PANE = registerBlock(
+            "magenta_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.MAGENTA,
+                    FabricBlockSettings.copyOf(Blocks.MAGENTA_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block ORANGE_SAIGA_PANE = registerBlock(
+            "orange_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.ORANGE,
+                    FabricBlockSettings.copyOf(Blocks.ORANGE_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block PINK_SAIGA_PANE = registerBlock(
+            "pink_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.PINK,
+                    FabricBlockSettings.copyOf(Blocks.PINK_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block PURPLE_SAIGA_PANE = registerBlock(
+            "purple_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.PURPLE,
+                    FabricBlockSettings.copyOf(Blocks.PURPLE_STAINED_GLASS_PANE)
+            )
+    );
+
+
+    public static final Block RED_SAIGA_PANE = registerBlock(
+            "red_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.RED,
+                    FabricBlockSettings.copyOf(Blocks.RED_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block WHITE_SAIGA_PANE = registerBlock(
+            "white_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.WHITE,
+                    FabricBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)
+            )
+    );
+
+    public static final Block YELLOW_SAIGA_PANE = registerBlock(
+            "yellow_saiga_pane",
+            new SaigaPaneBlock(
+                    DyeColor.YELLOW,
+                    FabricBlockSettings.copyOf(Blocks.YELLOW_STAINED_GLASS_PANE)
+            )
+    );
+
+    // </editor-fold>
+
+
+    public static final Block VOID_PORTAL = registerBlock(
+            "void_portal",
+            new VoidPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL))
+    );
+
+    // TODO: Custom status effect and duration
+    public static final Block KAYO = registerBlock(
+            "kayo",
+            new FlowerBlock(
+                    StatusEffects.LEVITATION,
+                    12,
+                    FabricBlockSettings.copyOf(Blocks.POPPY)
+            )
+    );
+
+    public static final Block POTTED_KAYO = registerBlock(
+            "potted_kayo",
+            new FlowerPotBlock(
+                    KAYO,
+                    FabricBlockSettings.copyOf(Blocks.POTTED_POPPY)
+            )
+    );
 
     public static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), new BlockItem(block, new FabricItemSettings()));

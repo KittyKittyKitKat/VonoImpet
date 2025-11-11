@@ -9,6 +9,7 @@ import static com.kittykittykitkat.vono_impet.VonoImpet.MOD_ID;
 
 public class VonoImpetSoundsEvents {
     public static final SoundEvent MUSIC_DISC_PASET_E_IMPETIF_LENA = registerSoundEvent("music_disc.paset_e_impetif_lena");
+    public static final SoundEvent MUSIC_DISC_ZERO = registerSoundEvent("music_disc.0");
 
     public static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(MOD_ID, name);

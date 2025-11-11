@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.TableBonusLootCondition;
@@ -114,6 +113,46 @@ public class VonoImpetBlockLootTableProvider extends FabricBlockLootTableProvide
 
         addDrop(VonoImpetBlocks.UNREFINED_CRYNIA);
         addDrop(VonoImpetBlocks.CRYNIA_BLOCK);
+        addDrop(VonoImpetBlocks.CRYNIA_BARS);
+        addDrop(VonoImpetBlocks.CRYNIA_DOOR, doorDrops(VonoImpetBlocks.CRYNIA_DOOR));
+        addDrop(VonoImpetBlocks.CRYNIA_TRAPDOOR);
+
+        addDropWithSilkTouch(VonoImpetBlocks.BLACK_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.BLUE_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.BROWN_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.CYAN_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.GRAY_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.GREEN_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.LIGHT_BLUE_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.LIGHT_GRAY_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.LIME_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.MAGENTA_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.ORANGE_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.PINK_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.PURPLE_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.RED_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.WHITE_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.YELLOW_SAIGA);
+        addDropWithSilkTouch(VonoImpetBlocks.BLACK_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.BLUE_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.BROWN_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.CYAN_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.GRAY_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.GREEN_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.LIGHT_BLUE_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.LIGHT_GRAY_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.LIME_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.MAGENTA_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.ORANGE_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.PINK_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.PURPLE_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.RED_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.WHITE_SAIGA_PANE);
+        addDropWithSilkTouch(VonoImpetBlocks.YELLOW_SAIGA_PANE);
+
+        addDrop(VonoImpetBlocks.KAYO);
+        addPottedPlantDrops(VonoImpetBlocks.POTTED_KAYO);
+
 
     }
 }

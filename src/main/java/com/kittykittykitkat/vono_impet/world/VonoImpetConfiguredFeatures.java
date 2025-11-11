@@ -20,6 +20,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.BiasedToBottomIntProvider;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
@@ -27,6 +28,7 @@ import net.minecraft.world.gen.root.AboveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
 import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AttachedToLeavesTreeDecorator;
@@ -34,6 +36,7 @@ import net.minecraft.world.gen.trunk.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 import static com.kittykittykitkat.vono_impet.VonoImpet.MOD_ID;
 
@@ -41,7 +44,11 @@ public class VonoImpetConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> UNREFINED_CRYNIA_KEY = registerKey("unrefined_crynia");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MIRAKELL_TREE_KEY = registerKey("mirakell_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ABOLATED_MIRAKELL_TREE_KEY = registerKey("abolated_mirakell_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> VARSTER_TREE_KEY = registerKey("varster_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ABOLATED_VARSTER_TREE_KEY = registerKey("abolated_varster_tree");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> HADELITE_DEPOSIT_KEY = registerKey("hadelite_deposit");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<Block> registryEntryLookup = context.getRegistryLookup(RegistryKeys.BLOCK);
@@ -67,24 +74,50 @@ public class VonoImpetConfiguredFeatures {
                 new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.4F, 0.5F, 1.0F, 0.5F),
                 new TwoLayersFeatureSize(1, 0, 2)
         ).decorators(
-                List.of(
-                        new LeavesMirakellVineTreeDecorator(0.125F),
-                        new AttachedToLeavesTreeDecorator(
-                                0.14F,
-                                1,
-                                0,
-                                new RandomizedIntBlockStateProvider(
-                                        BlockStateProvider.of(VonoImpetBlocks.MIRAKELL_BUSHY_VINES.getDefaultState().with(AbstractPlantStemBlock.AGE, 0)),
-                                        PropaguleBlock.AGE,
-                                        UniformIntProvider.create(0, 4)
-                                ),
-                                2,
-                                List.of(Direction.DOWN)
+                        List.of(
+                                new LeavesMirakellVineTreeDecorator(0.125F),
+                                new AttachedToLeavesTreeDecorator(
+                                        0.14F,
+                                        1,
+                                        0,
+                                        new RandomizedIntBlockStateProvider(
+                                                BlockStateProvider.of(VonoImpetBlocks.MIRAKELL_BUSHY_VINES.getDefaultState().with(AbstractPlantStemBlock.AGE, 0)),
+                                                PropaguleBlock.AGE,
+                                                UniformIntProvider.create(0, 4)
+                                        ),
+                                        2,
+                                        List.of(Direction.DOWN)
+                                )
                         )
                 )
-        )
-            .ignoreVines()
-            .build());
+                .ignoreVines()
+                .build());
+
+        register(context, ABOLATED_MIRAKELL_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(VonoImpetBlocks.MIRAKELL_LOG),
+                new LargeOakTrunkPlacer(3, 8, 0),
+                BlockStateProvider.of(VonoImpetBlocks.MIRAKELL_LEAVES),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(3), 4),
+                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
+        ).decorators(
+                        List.of(
+                                new LeavesMirakellVineTreeDecorator(0.1F),
+                                new AttachedToLeavesTreeDecorator(
+                                        0.1F,
+                                        1,
+                                        0,
+                                        new RandomizedIntBlockStateProvider(
+                                                BlockStateProvider.of(VonoImpetBlocks.MIRAKELL_BUSHY_VINES.getDefaultState().with(AbstractPlantStemBlock.AGE, 0)),
+                                                PropaguleBlock.AGE,
+                                                UniformIntProvider.create(0, 2)
+                                        ),
+                                        2,
+                                        List.of(Direction.DOWN)
+                                )
+                        )
+                )
+                .ignoreVines()
+                .build());
 
         register(context, VARSTER_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG),
@@ -134,6 +167,37 @@ public class VonoImpetConfiguredFeatures {
                 .dirtProvider(BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG))
                 .ignoreVines()
                 .build());
+
+        register(context, ABOLATED_VARSTER_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(VonoImpetBlocks.VARSTER_LOG),
+                new UpwardsBranchingTrunkPlacer(
+                        4, 1, 9, UniformIntProvider.create(1, 5), 0.75F, UniformIntProvider.create(0, 1), RegistryEntryList.of()
+                ),
+                BlockStateProvider.of(VonoImpetBlocks.VARSTER_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+                new TwoLayersFeatureSize(1, 0, 2)
+        )
+                .decorators(
+                        List.of(
+                                new AttachedToLeavesTreeDecorator(
+                                        0.75F,
+                                        0,
+                                        0,
+                                        SimpleBlockStateProvider.of(VonoImpetBlocks.VARSTER_LEAVES.getDefaultState()),
+                                        2,
+                                        List.of(Direction.DOWN, Direction.UP, Direction.SOUTH, Direction.NORTH, Direction.WEST, Direction.EAST)
+                                )
+                        )
+                )
+                .ignoreVines()
+                .build());
+
+        register(context, HADELITE_DEPOSIT_KEY, Feature.DISK, new DiskFeatureConfig(
+                PredicatedStateProvider.of(VonoImpetBlocks.HADELITE),
+                BlockPredicate.matchingBlocks(List.of(Blocks.SOUL_SOIL, Blocks.SOUL_SAND)),
+                UniformIntProvider.create(2, 3),
+                1
+        ));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

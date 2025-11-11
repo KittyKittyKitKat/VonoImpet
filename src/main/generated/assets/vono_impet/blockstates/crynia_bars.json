@@ -1,0 +1,265 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_post_end_top"
+      },
+      "when": {
+        "OR": [
+          {
+            "up_down_connection": "up"
+          },
+          {
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_post_end_bottom"
+      },
+      "when": {
+        "OR": [
+          {
+            "up_down_connection": "down"
+          },
+          {
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_post"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_cap"
+      },
+      "when": {
+        "east": "false",
+        "north": "true",
+        "south": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_cap",
+        "y": 90
+      },
+      "when": {
+        "east": "true",
+        "north": "false",
+        "south": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_cap_alt"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "true",
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_cap_alt",
+        "y": 90
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_end_top"
+      },
+      "when": {
+        "OR": [
+          {
+            "north": "true",
+            "up_down_connection": "up"
+          },
+          {
+            "north": "true",
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_end_bottom"
+      },
+      "when": {
+        "OR": [
+          {
+            "north": "true",
+            "up_down_connection": "down"
+          },
+          {
+            "north": "true",
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_end_top",
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "east": "true",
+            "up_down_connection": "up"
+          },
+          {
+            "east": "true",
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_end_bottom",
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "east": "true",
+            "up_down_connection": "down"
+          },
+          {
+            "east": "true",
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_alt"
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_alt_end_top"
+      },
+      "when": {
+        "OR": [
+          {
+            "south": "true",
+            "up_down_connection": "up"
+          },
+          {
+            "south": "true",
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_alt_end_bottom"
+      },
+      "when": {
+        "OR": [
+          {
+            "south": "true",
+            "up_down_connection": "down"
+          },
+          {
+            "south": "true",
+            "up_down_connection": "none"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_alt",
+        "y": 90
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_alt_end_top",
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "up_down_connection": "up",
+            "west": "true"
+          },
+          {
+            "up_down_connection": "none",
+            "west": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "vono_impet:block/crynia_bars_side_alt_end_bottom",
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "up_down_connection": "down",
+            "west": "true"
+          },
+          {
+            "up_down_connection": "none",
+            "west": "true"
+          }
+        ]
+      }
+    }
+  ]
+}

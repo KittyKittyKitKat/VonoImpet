@@ -1,6 +1,7 @@
 package com.kittykittykitkat.vono_impet.datagen;
 
 import com.kittykittykitkat.vono_impet.item.VonoImpetItems;
+import com.kittykittykitkat.vono_impet.tag.VonoImpetBlockTags;
 import com.kittykittykitkat.vono_impet.tag.VonoImpetItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -102,7 +103,8 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 .add(VonoImpetBlocks.HADELITE.asItem());
 
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
-                .add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
+                .add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA)
+                .add(VonoImpetItems.MUSIC_DISC_ZERO);
 
         getOrCreateTagBuilder(VonoImpetItemTags.WRETCHED_DROP_MUSIC_DISCS)
                 .add(VonoImpetItems.MUSIC_DISC_PASET_E_IMPETIF_LENA);
@@ -130,5 +132,14 @@ public class VonoImpetItemTagProvider extends FabricTagProvider.ItemTagProvider 
 
         getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES)
                 .add(VonoImpetItems.CRYNIA_PICKAXE);
+
+        getOrCreateTagBuilder(ItemTags.DOORS)
+                .add(VonoImpetBlocks.CRYNIA_DOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.TRAPDOORS)
+                .add(VonoImpetBlocks.CRYNIA_TRAPDOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
+                .add(VonoImpetBlocks.KAYO.asItem());
     }
 }

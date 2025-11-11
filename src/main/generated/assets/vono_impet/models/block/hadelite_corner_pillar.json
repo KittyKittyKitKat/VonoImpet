@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "vono_impet:block/hadelite_corner_pillar"
+    "all": "vono_impet:block/hadelite_pillar_top"
   }
 }
